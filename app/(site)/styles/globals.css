@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 1.2rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base NoctraMind background */
+body {
+  @apply text-ink-50;
+  background:
+    radial-gradient(circle at top, rgba(236, 72, 153, 0.18), transparent 60%),
+    radial-gradient(circle at bottom, rgba(79, 70, 229, 0.18), transparent 60%),
+    #020014;
+}
+
+/* Generic card + button */
+.card {
+  @apply rounded-2xl p-6 bg-black/60 ring-1 ring-pink-500/20 shadow-[0_0_18px_rgba(236,72,153,0.45)];
+}
+
+.btn {
+  @apply inline-flex items-center gap-2 rounded-2xl px-4 py-2 border border-pink-500/60 text-pink-100 hover:bg-pink-600/20 transition;
+}
+
+/* Home hero galaxy background */
+.nm-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(236, 72, 153, 0.35), transparent 55%),
+    radial-gradient(circle at 80% 80%, rgba(56, 189, 248, 0.25), transparent 55%),
+    #020014;
+  box-shadow:
+    0 0 35px rgba(236, 72, 153, 0.8),
+    0 0 70px rgba(56, 189, 248, 0.45);
+}
+
+/* Pixel star field */
+.nm-pixel-sky {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(244, 244, 255, 0.9) 1px, transparent 1px);
+  background-size: 4px 4px;
+  mix-blend-mode: screen;
+  opacity: 0.25;
+  animation: nmTwinkle 6s infinite ease-in-out alternate;
+}
+
+/* Twinkle animation (used also by projects) */
+@keyframes nmTwinkle {
+  0% {
+    opacity: 0.2;
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    opacity: 0.45;
+    transform: translate3d(-4px, -3px, 0);
+  }
+  100% {
+    opacity: 0.25;
+    transform: translate3d(3px, 2px, 0);
+  }
+}
+
+.animate-twinkle {
+  background-image: radial-gradient(circle, rgba(236, 72, 153, 0.6) 1px, transparent 1px);
+  background-size: 3px 3px;
+  animation: nmTwinkle 5s infinite ease-in-out alternate;
+}
+
+/* Floating orbs for hero */
+.nm-orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(0.5px);
+  opacity: 0.65;
+  animation: nmFloat 18s infinite ease-in-out alternate;
+}
+
+@keyframes nmFloat {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(12px, -18px, 0) scale(1.05);
+  }
+  100% {
+    transform: translate3d(-16px, 10px, 0) scale(1.02);
+  }
+}
+
+/* Root subtle scanlines */
+.nm-root::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  opacity: 0.08;
+  mix-blend-mode: soft-light;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.06) 1px,
+    transparent 1px
+  );
+  background-size: 100% 3px;
+}
