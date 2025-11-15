@@ -37,11 +37,11 @@ function TopNav() {
 
         {/* Desktop Nav */}
         <nav className="hidden sm:flex items-center gap-6 text-sm">
-          <NextLink href="/">Home</NextLink>
-          <NextLink href="/projects">Projects</NextLink>
-          <NextLink href="/blog">Blog</NextLink>
-          <NextLink href="/vision">Vision</NextLink>
-          <NextLink href="/contact" className="btn">Contact</NextLink>
+          <NextLink href="/site">Home</NextLink>
+          <NextLink href="/site/projects">Projects</NextLink>
+          <NextLink href="/site/blog">Blog</NextLink>
+          <NextLink href="/site/vision">Vision</NextLink>
+          <NextLink href="/site/contact" className="btn">Contact</NextLink>
         </nav>
 
         {/* Mobile placeholder (no theme toggle) */}

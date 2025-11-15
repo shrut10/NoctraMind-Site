@@ -21,6 +21,8 @@ function Hero() {
       transition={{ duration: 0.9, ease: "easeOut" }}
     >
       <div className="nm-pixel-sky" />
+
+      {/* Glow Orbs */}
       <div
         className="nm-orb"
         style={{
@@ -32,6 +34,17 @@ function Hero() {
             "radial-gradient(circle, rgba(236,72,153,0.8), transparent 55%)",
         }}
       />
+      <div
+        className="nm-orb"
+        style={{
+          width: "120px",
+          height: "120px",
+          bottom: "-20px",
+          left: "10%",
+          background:
+            "radial-gradient(circle, rgba(56,189,248,0.9), transparent 55%)",
+        }}
+      />
 
       <div className="relative max-w-2xl space-y-4">
         <motion.p
@@ -40,7 +53,7 @@ function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.1 }}
         >
-          NoctraMind Laboratory
+          NoctraMind Laboratory by Jayashruthi RB
         </motion.p>
 
         <motion.h1
@@ -49,7 +62,7 @@ function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2 }}
         >
-          Mapping the border between{" "}
+          Welcome to my portal, where I explore the border between{" "}
           <span className="text-pink-300">code</span> and{" "}
           <span className="text-purple-300">consciousness</span>.
         </motion.h1>
@@ -60,9 +73,8 @@ function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.35 }}
         >
-          Data scientist exploring machine minds, artificial agency, and the
-          intersections between intelligence, introspection, and digital
-          consciousness.
+          Data scientist exploring AI agents, spiritual neuroscience
+          and experimental code to understand what a machine mind can become.
         </motion.p>
 
         <motion.div
@@ -71,15 +83,13 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
         >
-          <NextLink href="/projects" className="btn">
+          <NextLink href="/site/projects" className="btn">
             View Projects
           </NextLink>
-
-          <NextLink href="/blog" className="btn">
-            Visit Blog
+          <NextLink href="/site/blog" className="btn">
+            Blog
           </NextLink>
-
-          <NextLink href="/contact" className="btn">
+          <NextLink href="/site/contact" className="btn">
             Contact
           </NextLink>
         </motion.div>
@@ -96,31 +106,33 @@ function QuickGrid() {
           Agents & Automation
         </h3>
         <p className="opacity-90 mt-2 text-sm">
-          Experiments in AI agents and computational behaviour.
+          My technical builds exploring AI agents, automation and machine behaviour.
         </p>
-        <NextLink className="btn mt-4" href="/projects">
-          Explore Projects
+        <NextLink className="btn mt-4" href="/site/projects">
+          Explore projects
         </NextLink>
       </div>
 
       <div className="card">
         <h3 className="font-semibold text-lg text-pink-200">
-          Blog & Essays
+          Writing & Analysis
         </h3>
         <p className="opacity-90 mt-2 text-sm">
-          Writing on intelligence, consciousness, metaphysics and machine minds.
+          My long-form essays on AI, consciousness, metaphysics and computational philosophy.
         </p>
-        <NextLink className="btn mt-4" href="/blog">
-          Read Blog
+        <NextLink className="btn mt-4" href="/site/blog">
+          Read the blog
         </NextLink>
       </div>
 
       <div className="card">
-        <h3 className="font-semibold text-lg text-pink-200">Say Hello</h3>
+        <h3 className="font-semibold text-lg text-pink-200">
+          Work With Me
+        </h3>
         <p className="opacity-90 mt-2 text-sm">
-          Want to collaborate or discuss an idea? Reach out.
+          Want to reach out about collaborations, opportunities or anything else?
         </p>
-        <NextLink className="btn mt-4" href="/contact">
+        <NextLink className="btn mt-4" href="/site/contact">
           Contact
         </NextLink>
       </div>
