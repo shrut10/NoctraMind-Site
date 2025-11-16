@@ -3,9 +3,9 @@ import "./site/styles/globals.css";
 import ClientLayout from "./ClientLayout";
 
 export const metadata = {
-  title: "NoctraMind by Jayashruthi Rajesh Babu",
+  title: "Jayashruthi Rajesh Babu",
   description:
-    "NoctraMind is my lab for my works and findings on AI and consciousness.",
+    "This site is my personal lab for my works and findings on AI and consciousness.",
 };
 
 export default function RootLayout({ children }) {
