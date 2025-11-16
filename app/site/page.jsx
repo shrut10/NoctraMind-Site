@@ -53,7 +53,7 @@ function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.1 }}
         >
-          NoctraMind Laboratory by Jayashruthi RB
+          Laboratory by Jayashruthi RB
         </motion.p>
 
         <motion.h1

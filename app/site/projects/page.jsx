@@ -38,7 +38,7 @@ export default function Page() {
 
       <header className="relative">
         <h1 className="text-4xl font-extrabold tracking-tight text-pink-400 drop-shadow-[0_0_20px_rgba(236,72,153,0.9)]">
-          NoctraMind Projects
+          Projects
         </h1>
         <p className="opacity-80 text-lg">My builds and experiments</p>
       </header>

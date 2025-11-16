@@ -32,7 +32,7 @@ function TopNav() {
           href="/"
           className="font-semibold tracking-tight text-pink-300 drop-shadow-[0_0_12px_rgba(236,72,153,0.9)]"
         >
-          NoctraMind by Jayashruthi
+          Jayashruthi's Website
         </NextLink>
 
         {/* Desktop Nav */}
@@ -55,7 +55,7 @@ function Footer() {
   return (
     <footer className="border-t border-ink-700/70 py-10 mt-16 bg-black/60 backdrop-blur">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 md:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm opacity-80">
-        <p>© {new Date().getFullYear()} Jayashruthi at NoctraMind</p>
+        <p>© {new Date().getFullYear()} Jayashruthi Rajesh Babu</p>
         <div className="flex gap-4">
           <a
             href="https://github.com/shrut10"
