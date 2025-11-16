@@ -26,6 +26,13 @@ const projects = [
     tags: ["NLP", "Genetic Algorithms", "Optimisation"],
     link: "https://github.com/wphs3147-uol/MATH1604-group-project",
   },
+  {
+    title: "My Portfolio Website",
+    description:
+      "Check out my complete codebase for this site that I built with JavaScript, Next.js, a custom content loader and hand crafted UI components.",
+    tags: ["Next.js", "JavaScript", "Web Development"],
+    link: "https://github.com/shrut10/NoctraMind-Site",
+  },
 ];
 
 export default function Page() {
