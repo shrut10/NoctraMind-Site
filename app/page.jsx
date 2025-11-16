@@ -53,7 +53,7 @@ function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.1 }}
         >
-          Laboratory by Jayashruthi RB
+          Jayashruthi Rajesh Babu's Portfolio Site
         </motion.p>
 
         <motion.h1
@@ -73,7 +73,7 @@ function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.35 }}
         >
-          Data scientist exploring AI agents and spiritual neuroscience to understand what a machine mind can become.
+          Data scientist exploring AI agents and computational neuroscience to further the understanding of machine intelligence.
         </motion.p>
 
         <motion.div
@@ -138,3 +138,22 @@ function QuickGrid() {
     </div>
   );
 }
+
+<script type="application/ld+json">
+{`
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jayashruthi Rajesh Babu",
+  "alternateName": "Shruthi Rajesh Babu",
+  "url": "https://jayashruthi.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/jayashruthi-r-6592101b9/",
+    "https://github.com/shrut10",
+    "https://medium.com/@rjayashruthi"
+  ],
+  "jobTitle": "Data Science Student",
+  "affiliation": "University of Leeds"
+}
+`}
+</script>

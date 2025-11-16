@@ -33,7 +33,7 @@ function TopNav() {
           href="/"
           className="font-semibold tracking-tight text-pink-300 drop-shadow-[0_0_12px_rgba(236,72,153,0.9)]"
         >
-          Jayashruthi’s Portfolio
+          Jayashruthi Rajesh Babu’s Portfolio
         </NextLink>
 
         {/* Desktop Navigation */}

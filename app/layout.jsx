@@ -14,19 +14,22 @@ export default function RootLayout({ children }) {
   );
 }
 export const metadata = {
-  title: "Jayashruthi Rajesh Babu | Data Scientist & AI Developer",
+  title: "Jayashruthi Rajesh Babu | Portfolio",
   description:
-    "Portfolio of Jayashruthi (Shruthi) Rajesh Babu — Data Science student, AI developer, automation builder and creative researcher.",
+    "Jayashruthi (Shruthi) Rajesh Babu's Portfolio: Data Science student, AI developer, automation builder and creative technologist.",
   keywords: [
-    "Jayashruthi",
     "Jayashruthi Rajesh Babu",
     "Shruthi Rajesh Babu",
+    "Jayashruthi Rajesh",
     "Shruthi Rajesh",
     "Shruthi RB",
     "Jayashruthi RB",
-    "Shruthi portfolio",
     "Jayashruthi portfolio",
-    "AI projects",
-    "data science portfolio"
-  ]
+    "Shruthi AI portfolio",
+    "Data Science portfolio Leeds",
+    "AI developer portfolio"
+  ],
+  authors: [{ name: "Jayashruthi Rajesh Babu" }],
+  creator: "Jayashruthi Rajesh Babu",
+  publisher: "Jayashruthi Rajesh Babu",
 };
