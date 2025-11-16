@@ -73,8 +73,7 @@ function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.35 }}
         >
-          Data scientist exploring AI agents, spiritual neuroscience
-          and experimental code to understand what a machine mind can become.
+          Data scientist exploring AI agents and spiritual neuroscience to understand what a machine mind can become.
         </motion.p>
 
         <motion.div
@@ -103,10 +102,10 @@ function QuickGrid() {
     <div className="grid md:grid-cols-3 gap-6">
       <div className="card">
         <h3 className="font-semibold text-lg text-pink-200">
-          Agents & Automation
+          Technical Projects
         </h3>
         <p className="opacity-90 mt-2 text-sm">
-          My technical builds exploring AI agents, automation and machine behaviour.
+          My builds and various other projects.
         </p>
         <NextLink className="btn mt-4" href="/site/projects">
           Explore projects
@@ -115,10 +114,10 @@ function QuickGrid() {
 
       <div className="card">
         <h3 className="font-semibold text-lg text-pink-200">
-          Writing & Analysis
+          Writing
         </h3>
         <p className="opacity-90 mt-2 text-sm">
-          My long-form essays on AI, consciousness, metaphysics and computational philosophy.
+          Short blog posts on topics of interest.
         </p>
         <NextLink className="btn mt-4" href="/site/blog">
           Read the blog
@@ -127,10 +126,10 @@ function QuickGrid() {
 
       <div className="card">
         <h3 className="font-semibold text-lg text-pink-200">
-          Work With Me
+          Contact Me
         </h3>
         <p className="opacity-90 mt-2 text-sm">
-          Want to reach out about collaborations, opportunities or anything else?
+          Here you can reach me for collaborations or opportunities.
         </p>
         <NextLink className="btn mt-4" href="/site/contact">
           Contact
