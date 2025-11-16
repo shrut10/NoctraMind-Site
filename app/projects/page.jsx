@@ -13,6 +13,13 @@ const projects = [
     link: "https://github.com/wphs3147-uol/ai-agent-tool",
   },
   {
+    title: "Evolutionary Optimisation Project",
+    description:
+      "Analysis of how hyperparameter choices affect evolutionary optimisation performance by running controlled trials across population sizes and mutation rates, evaluating convergence behaviour through statistical metrics and visualisations.",
+      ["Python", "Machine Learning", "Optimisation", "Evolutionary Algorithms", "Data Visualisation", "Hyperparameter Tuning"],
+    link: "https://github.com/shrut10/Evolutionary-Optimisation",
+  },
+  {
     title: "PageRank Search Spider & Visualiser",
     description:
       "A Python search engine emulator that crawls websites, stores link graphs in SQLite, computes PageRank iteratively and includes a D3.js force directed visualiser for further exploration.",
