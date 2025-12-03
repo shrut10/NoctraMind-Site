@@ -7,6 +7,10 @@ const posts = [
     link: "https://medium.com/@rjayashruthi/bridging-minds-and-machines-through-neural-networks-9a5f06778cc2"
   },
   {
+    title: "My Overview of Structural dependencies in Discrete and Continuous time Markov processes",
+    excerpt: "An overview of how ideas such as communicating classes, irreducibility, periodicity, Poisson processes and generator matrices connect to form the structure of Markov processes.",
+    link: "/pdfs/markov-essay.pdf"
+  {
     title: "Exploring the Hypothesis of a Cyclical Universe",
     excerpt: "In this essay I explore the idea that the universe follows a cyclic pattern of creation and collapse, influenced by recurring energetic structures that appear throughout nature.",
     link: "https://medium.com/@rjayashruthi/exploring-the-hypothesis-of-a-cyclical-universe-fbc11c980dc5"
