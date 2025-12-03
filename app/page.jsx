@@ -62,9 +62,9 @@ function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2 }}
         >
-          Welcome to my portal, where I explore the border between{" "}
-          <span className="text-pink-300">code</span> and{" "}
-          <span className="text-purple-300">consciousness</span>.
+          Welcome to my website, where you will find my{" "}
+          <span className="text-pink-300">projects</span> and{" "}
+          <span className="text-purple-300">written work</span>.
         </motion.h1>
 
         <motion.p
