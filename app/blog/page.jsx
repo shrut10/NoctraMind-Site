@@ -10,6 +10,7 @@ const posts = [
     title: "My Overview of Structural dependencies in Discrete and Continuous time Markov processes",
     excerpt: "An overview of how ideas such as communicating classes, irreducibility, periodicity, Poisson processes and generator matrices connect to form the structure of Markov processes.",
     link: "/pdfs/markov-essay.pdf"
+  },
   {
     title: "Exploring the Hypothesis of a Cyclical Universe",
     excerpt: "In this essay I explore the idea that the universe follows a cyclic pattern of creation and collapse, influenced by recurring energetic structures that appear throughout nature.",
