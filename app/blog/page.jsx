@@ -48,7 +48,7 @@ export default function Page() {
               rel="noreferrer"
               className="btn mt-4"
             >
-              Read on Medium
+              Read
             </a>
           </li>
         ))}
