@@ -6,6 +6,13 @@ export const dynamic = "force-static";
 
 const projects = [
   {
+    title: "House Price Prediction with Neighbourhood Graph Features",
+    description:
+      "A group coursework project predicting California housing prices using feedforward neural networks. Enhanced the baseline model by engineering neighbourhood features from spatial graph relationships (k nearest neighbours), achieving a 35% reduction in test error.",
+    tags: ["Python", "scikit-learn", "Neural Networks", "Graph Features", "Data Science"],
+    link: "https://github.com/shrut10/House-Price-Prediction",
+  },
+  {
     title: "AI Agent System Automation Tool",
     description:
       "A natural language powered OS automation agent. Uses OCR, SQLite memory, action planning and Python scripting to execute tasks on macOS locally without browser automation.",
