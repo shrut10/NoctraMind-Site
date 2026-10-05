@@ -1,25 +1,3 @@
 export default function sitemap() {
-    return [
-      {
-        url: "https://jayashruthi.com",
-        lastModified: new Date(),
-      },
-      {
-        url: "https://jayashruthi.com/projects",
-        lastModified: new Date(),
-      },
-      {
-        url: "https://jayashruthi.com/blog",
-        lastModified: new Date(),
-      },
-      {
-        url: "https://jayashruthi.com/contact",
-        lastModified: new Date(),
-      },
-      {
-        url: "https://jayashruthi.com/about",
-        lastModified: new Date(),
-      },
-    ];
-  }
-  
+  return ['', '/projects', '/projects/intentlab', '/blog', '/about', '/contact'].map(path => ({ url: `https://jayashruthi.com${path}`, lastModified: '2026-10-05', changeFrequency: 'monthly', priority: path === '' ? 1 : 0.7 }));
+}

@@ -1,93 +1,37 @@
-"use client";
+'use client';
 
-import { ThemeProvider } from "next-themes";
-import NextLink from "next/link";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useRef, useState } from 'react';
+import PixelIcon from '@/components/PixelIcon';
+import { profile } from '@/content/site';
+
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/blog', label: 'Writing' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+];
 
 export default function ClientLayout({ children }) {
-  return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem={false}>
-      <SiteShell>{children}</SiteShell>
-    </ThemeProvider>
-  );
-}
-
-function SiteShell({ children }) {
-  return (
-    <div className="relative nm-root">
-      <TopNav />
-      <main className="mx-auto max-w-5xl px-4 sm:px-6 md:px-8 py-10">
-        {children}
-      </main>
-      <Footer />
-    </div>
-  );
-}
-
-function TopNav() {
-  return (
-    <header className="sticky top-0 z-50 backdrop-blur bg-ink-950/80 border-b border-pink-500/30 shadow-[0_0_25px_rgba(236,72,153,0.5)]">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 md:px-8 h-16 flex items-center justify-between">
-
-        {/* Brand / Logo */}
-        <NextLink
-          href="/"
-          className="font-semibold tracking-tight text-pink-300 drop-shadow-[0_0_12px_rgba(236,72,153,0.9)]"
-        >
-          Jayashruthi Rajesh Babu’s Portfolio
-        </NextLink>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden sm:flex items-center gap-6 text-sm">
-          <NextLink href="/">Home</NextLink>
-          <NextLink href="/projects">Projects</NextLink>
-          <NextLink href="/blog">Blog</NextLink>
-          <NextLink href="/about">About</NextLink>
-          <NextLink href="/contact" className="btn">Contact</NextLink>
-        </nav>
-
-        {/* Mobile placeholder */}
-        <div className="sm:hidden"></div>
+  const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuButton = useRef(null);
+  const active = href => href === '/' ? pathname === '/' : pathname.startsWith(href);
+  function closeOnEscape(event) {
+    if (event.key === 'Escape' && menuOpen) { setMenuOpen(false); menuButton.current?.focus(); }
+  }
+  return <div className="site-shell" onKeyDown={closeOnEscape}>
+    <a className="skip-link" href="#main">Skip to content</a>
+    <header className="site-header">
+      <div className="header-inner container">
+        <Link className="brand" href="/" aria-label="Shruthi — home" onClick={() => setMenuOpen(false)}><PixelIcon name="sprout" /><span>shruthi<span className="brand-dot">.</span></span></Link>
+        <button className="menu-button button button-small" ref={menuButton} type="button" aria-expanded={menuOpen} aria-controls="site-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? 'Close ×' : 'Menu +'}</button>
+        <nav id="site-navigation" aria-label="Main navigation" className={`site-nav ${menuOpen ? 'is-open' : ''}`}>{links.map(link => <Link key={link.href} href={link.href} aria-current={active(link.href) ? 'page' : undefined} onClick={() => setMenuOpen(false)}>{link.label}</Link>)}</nav>
       </div>
     </header>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="border-t border-ink-700/70 py-10 mt-16 bg-black/60 backdrop-blur">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 md:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm opacity-80">
-
-        <p>© {new Date().getFullYear()} Jayashruthi Rajesh Babu</p>
-
-        <div className="flex gap-4">
-          <a
-            href="https://github.com/shrut10"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-pink-300"
-          >
-            Personal GitHub
-          </a>
-
-          <a
-            href="https://github.com/wphs3147-uol"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-pink-300"
-          >
-            University GitHub
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/jayashruthi-r-6592101b9/"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-pink-300"
-          >
-            LinkedIn
-          </a>
-        </div>
-      </div>
-    </footer>
-  );
+    <main id="main" className="container main-content" tabIndex={-1}>{children}</main>
+    <footer className="site-footer"><div className="container footer-inner"><div><Link className="footer-brand" href="/"><PixelIcon name="flower" />Thanks for stopping by.</Link><p>© {new Date().getFullYear()} {profile.name}</p></div><nav aria-label="Social links"><a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href={profile.universityGithub} target="_blank" rel="noopener noreferrer">University code ↗</a><a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href={`mailto:${profile.email}`}>Email ↗</a></nav></div></footer>
+  </div>;
 }

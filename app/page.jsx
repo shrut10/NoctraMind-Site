@@ -1,159 +1,23 @@
-"use client";
+import Link from 'next/link';
+import PixelDesk from '@/components/PixelDesk';
+import PixelIcon from '@/components/PixelIcon';
+import ProjectCard from '@/components/ProjectCard';
+import WritingList from '@/components/WritingList';
+import { profile, home, projects, posts } from '@/content/site';
 
-import { motion } from "framer-motion";
-import NextLink from "next/link";
+export const metadata = { alternates: { canonical: '/' } };
 
-export default function Page() {
-  return (
-    <section className="space-y-10">
-      <Hero />
-      <QuickGrid />
+export default function Home() {
+  return <>
+    <section className="news-board" aria-labelledby="latest-title"><div className="news-stamp"><PixelIcon name="brain" /><span>NEW<br />BUILD</span></div><div className="news-copy"><p className="eyebrow">{home.newsLabel}</p><h2 id="latest-title">{home.newsTitle}</h2><p>{home.newsText}</p><p className="news-detail">{home.newsDetail}</p></div><Link className="button button-yellow" href="/projects/intentlab">{home.newsButton}<PixelIcon name="arrow" /></Link></section>
+    <section className="hero" aria-labelledby="hello">
+      <div className="hero-copy"><p className="eyebrow"><span className="tiny-square" />{home.eyebrow}</p><h1 id="hello">{home.greeting}<br /><span>{profile.shortName}.</span></h1><p className="hero-intro">{profile.introduction}</p><p className="hero-welcome">{profile.welcome}</p><div className="button-row"><Link href="/projects" className="button button-green">Explore my projects <PixelIcon name="arrow" /></Link><Link href="/about" className="text-link">A little about me ↗</Link></div><p className="degree">{profile.degree}</p></div>
+      <PixelDesk />
     </section>
-  );
+
+    <section className="page-section" aria-labelledby="projects-heading"><div className="section-heading"><div><p className="eyebrow">The workbench</p><h2 id="projects-heading">{home.projectsHeading}</h2><p>{home.projectsIntro}</p></div><Link href="/projects" className="text-link">All projects <span aria-hidden="true">→</span></Link></div><div className="project-grid">{projects.slice(0, 2).map(project => <ProjectCard key={project.id} project={project} />)}</div></section>
+    <section className="page-section" aria-labelledby="writing-heading"><div className="section-heading"><div><p className="eyebrow">A few thoughts</p><h2 id="writing-heading">{home.writingHeading}</h2><p>{home.writingIntro}</p></div><Link href="/blog" className="text-link">All writing <span aria-hidden="true">→</span></Link></div><WritingList posts={[posts[0], posts[3]]} /></section>
+    <section className="contact-strip"><PixelIcon name="mail" /><div><h2>{home.contactHeading}</h2><p>{home.contactText}</p></div><Link href="/contact" className="button">Say hello <span aria-hidden="true">↗</span></Link></section>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Person', name: profile.name, alternateName: 'Shruthi Rajesh Babu', url: 'https://jayashruthi.com', sameAs: [profile.linkedin, profile.github, profile.medium], jobTitle: 'Data Science Student', affiliation: { '@type': 'CollegeOrUniversity', name: 'University of Leeds' } }).replace(/</g, '\\u003c') }} />
+  </>;
 }
-
-function Hero() {
-  return (
-    <motion.section
-      className="nm-hero p-8 sm:p-10 md:p-12"
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.9, ease: "easeOut" }}
-    >
-      <div className="nm-pixel-sky" />
-
-      {/* Glow Orbs */}
-      <div
-        className="nm-orb"
-        style={{
-          width: "210px",
-          height: "210px",
-          top: "-40px",
-          right: "-30px",
-          background:
-            "radial-gradient(circle, rgba(236,72,153,0.8), transparent 55%)",
-        }}
-      />
-      <div
-        className="nm-orb"
-        style={{
-          width: "120px",
-          height: "120px",
-          bottom: "-20px",
-          left: "10%",
-          background:
-            "radial-gradient(circle, rgba(56,189,248,0.9), transparent 55%)",
-        }}
-      />
-
-      <div className="relative max-w-2xl space-y-4">
-        <motion.p
-          className="uppercase tracking-[0.25em] text-xs text-pink-200/80"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.1 }}
-        >
-          Jayashruthi Rajesh Babu's Portfolio Site
-        </motion.p>
-
-        <motion.h1
-          className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-pink-50 drop-shadow-[0_0_18px_rgba(236,72,153,0.9)]"
-          initial={{ opacity: 0, x: -25 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.2 }}
-        >
-          Welcome to my website, where you will find my{" "}
-          <span className="text-pink-300">projects</span> and{" "}
-          <span className="text-purple-300">written work</span>.
-        </motion.h1>
-
-        <motion.p
-          className="text-base sm:text-lg text-slate-100/90 max-w-xl"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.35 }}
-        >
-          Data scientist exploring AI agents and computational neuroscience to further the understanding of machine intelligence.
-        </motion.p>
-
-        <motion.div
-          className="mt-6 flex flex-wrap gap-3"
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-        >
-          <NextLink href="/projects" className="btn">
-            View Projects
-          </NextLink>
-          <NextLink href="/blog" className="btn">
-            Blog
-          </NextLink>
-          <NextLink href="/contact" className="btn">
-            Contact
-          </NextLink>
-        </motion.div>
-      </div>
-    </motion.section>
-  );
-}
-
-function QuickGrid() {
-  return (
-    <div className="grid md:grid-cols-3 gap-6">
-      <div className="card">
-        <h3 className="font-semibold text-lg text-pink-200">
-          Technical Projects
-        </h3>
-        <p className="opacity-90 mt-2 text-sm">
-          My builds and various other projects.
-        </p>
-        <NextLink className="btn mt-4" href="/projects">
-          Explore projects
-        </NextLink>
-      </div>
-
-      <div className="card">
-        <h3 className="font-semibold text-lg text-pink-200">
-          Writing
-        </h3>
-        <p className="opacity-90 mt-2 text-sm">
-          Short blog posts on topics of interest.
-        </p>
-        <NextLink className="btn mt-4" href="/blog">
-          Read the blog
-        </NextLink>
-      </div>
-
-      <div className="card">
-        <h3 className="font-semibold text-lg text-pink-200">
-          Contact Me
-        </h3>
-        <p className="opacity-90 mt-2 text-sm">
-          Here you can reach me for collaborations or opportunities.
-        </p>
-        <NextLink className="btn mt-4" href="/contact">
-          Contact
-        </NextLink>
-      </div>
-    </div>
-  );
-}
-
-<script type="application/ld+json">
-{`
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Jayashruthi Rajesh Babu",
-  "alternateName": "Shruthi Rajesh Babu",
-  "url": "https://jayashruthi.com",
-  "sameAs": [
-    "https://www.linkedin.com/in/jayashruthi-r-6592101b9/",
-    "https://github.com/shrut10",
-    "https://medium.com/@rjayashruthi"
-  ],
-  "jobTitle": "Data Science Student",
-  "affiliation": "University of Leeds"
-}
-`}
-</script>

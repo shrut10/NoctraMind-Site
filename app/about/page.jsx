@@ -1,52 +1,9 @@
-export const dynamic = "force-static";
+import Link from 'next/link';
+import PixelIcon from '@/components/PixelIcon';
+import { about, profile } from '@/content/site';
 
-export default function Page() {
-  return (
-    <section className="space-y-6 max-w-3xl">
-      <header>
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-pink-200 drop-shadow-[0_0_14px_rgba(236,72,153,0.8)]">
-          About Me
-        </h1>
-        <p className="opacity-80 text-sm uppercase tracking-[0.25em] mt-2">
-          Data Science · AI · Cognition · Systems
-        </p>
-      </header>
+export const metadata = { title: 'About', description: 'Meet Jayashruthi Rajesh Babu, a data science student at Leeds interested in AI, machine learning and human minds.', alternates: { canonical: '/about' } };
 
-      <p className="opacity-90 leading-relaxed">
-        My name is <strong>Jayashruthi Rajesh Babu</strong>, but most people call me <strong>Shruthi</strong>.
-        I am a Data Science student at the University of Leeds with a longstanding avid interest in
-        artificial intelligence, automation and the deeper questions that come up when
-        you examine human minds and machines through the same computational lens.
-      </p>
-
-      <p className="opacity-90 leading-relaxed">
-        My work covers practical software engineering and conceptual exploration. I build
-        automation tools, experiment with AI agents and in my free time, I write about topics such as
-        consciousness, cognition and emerging intelligent systems. I enjoy approaching
-        technical challenges with both scientific precision but also creative abstraction,
-        treating programs as a medium for understanding behaviour, structure and thought.
-      </p>
-
-      <p className="opacity-90 leading-relaxed">
-        Beyond academic work, I use personal projects to test ideas quickly. These range from
-        OS-level AI agents and experimental memory models to essays on computational
-        philosophy and the future of machine intelligence. These projects allow me to
-        explore how reasoning, perception and identity might be represented in systems
-        very different from our own.
-      </p>
-
-      <p className="opacity-90 leading-relaxed">
-        I am working towards a career in AI engineering, data science or intelligent
-        systems research, with the ultimate ambition of contributing to technologies
-        that further our understanding of what minds are and how they can be modelled.
-        I developed this wesbite as a living archive of my projects, ideas and ongoing
-        development.
-      </p>
-
-      <p className="opacity-90 leading-relaxed">
-        If you'd like to collaborate, discuss ideas or get in touch about opportunities,
-        feel free to reach out through the contact page.
-      </p>
-    </section>
-  );
+export default function About() {
+  return <><header className="page-heading"><p className="eyebrow">The person behind the projects</p><h1>{about.title}</h1></header><div className="about-grid"><div className="about-story prose"><p className="lead">{about.intro}</p>{about.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}<div className="button-row"><Link className="button button-green" href="/projects">See what I’m making <PixelIcon name="arrow" /></Link><Link href="/contact" className="text-link">Say hello ↗</Link></div></div><aside className="field-notes"><div className="note-pin" aria-hidden="true" /><PixelIcon name="sprout" /><h2>{about.currentHeading}</h2><ul>{about.current.map(item => <li key={item}>{item}</li>)}</ul><p className="small-copy">{profile.degree}</p></aside></div></>;
 }
