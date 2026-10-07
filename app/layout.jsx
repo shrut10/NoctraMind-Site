@@ -9,11 +9,11 @@ import ClientLayout from './ClientLayout';
 
 export const metadata = {
   metadataBase: new URL('https://jayashruthi.com'),
-  title: { default: 'Shruthi | AI, ML & things I’m curious about', template: '%s | Shruthi' },
+  title: { default: 'Shruthi | Data science and machine learning', template: '%s | Shruthi' },
   description: 'Jayashruthi Rajesh Babu — data science student at Leeds, building AI and ML projects and writing about brains, minds and machines.',
   authors: [{ name: 'Jayashruthi Rajesh Babu' }],
   creator: 'Jayashruthi Rajesh Babu',
-  openGraph: { type: 'website', locale: 'en_GB', siteName: 'Shruthi’s portfolio', images: [{ url: '/social-card.png', width: 1200, height: 630, alt: 'Shruthi — AI, ML and things I’m curious about' }] },
+  openGraph: { type: 'website', locale: 'en_GB', siteName: 'Shruthi’s portfolio', images: [{ url: '/social-card.png', width: 1200, height: 630, alt: 'Shruthi — Data science and machine learning' }] },
   twitter: { card: 'summary_large_image', images: ['/social-card.png'] },
 };
 

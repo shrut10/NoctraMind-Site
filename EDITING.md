@@ -11,7 +11,7 @@ This is the main file for changing the wording. You can open it in any text edit
 | What you want to change | Find this in `content/site.js` |
 | --- | --- |
 | Your name, introduction, email and social links | `profile` |
-| The homepage announcement and its button wording | `home.newsTitle`, `home.newsText`, `home.newsDetail`, `home.newsButton` |
+| The homepage announcement and its button wording | `home.newsTitle`, `home.newsText`, `home.newsButton` |
 | Other homepage headings and sentences | `home` |
 | IntentLab’s explanation, motivation and results | `intentlab` |
 | Existing project names, descriptions and GitHub links | `projects` |
@@ -35,12 +35,12 @@ You can use paragraphs that sound like you. Keep the measured results, dataset a
 - `app/blog/page.jsx`: writing page introduction and note about the PDF.
 - `app/ClientLayout.jsx`: menu and footer wording.
 - `app/layout.jsx`: the default browser-tab title and search description. Other page files contain their own `metadata`.
-- `components/PixelDesk.jsx`: the illustration and its day/night captions.
+- `components/ThrongletField.jsx`: the canvas sprites, walking and hunger behaviour, Feed button and animation controls.
 - `app/styles/globals.css`: colours, fonts, borders, spacing and button styling. The colours are at the very top.
 - `public/social-card.svg` and `public/social-card.png`: the preview image used when the site is shared. If you edit the SVG, regenerate the PNG with `npm run social-image`.
 - `app/sitemap.js`: add any new page URLs and change `lastModified` when making a substantive update.
 
-The pixel illustration is original SVG, made from shapes. It uses no Stardew Valley assets. Fonts are served from the website itself.
+The field uses original pixel sprites drawn on a canvas, inspired by the creatures in Black Mirror’s Plaything. It uses no extracted game artwork and runs as a small local behaviour simulation, without a language model. Fonts are served from the website itself.
 
 ## Preview your changes
 

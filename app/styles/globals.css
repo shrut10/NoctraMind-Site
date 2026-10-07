@@ -68,14 +68,16 @@ svg { display: block; }
 .hero-welcome { max-width: 420px; margin-top: 13px; color: var(--muted); font-size: .94rem; }
 .hero .button-row { margin-top: 27px; }
 .degree { margin-top: 27px; font-size: .71rem; color: var(--muted); letter-spacing: .015em; }
-.desk { border: 3px solid var(--ink); box-shadow: 7px 7px 0 #b4bda1; background: var(--panel); transform: translateY(2px); }
-.desk-title { display: flex; justify-content: space-between; padding: 8px 12px; background: var(--green-light); border-bottom: 3px solid var(--ink); font: 400 1.1rem/1.1 var(--pixel); }
-.desk-title span { font-size: .7rem; }
-.desk svg { width: 100%; height: auto; image-rendering: pixelated; }
-.desk figcaption { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 4px 8px 4px 14px; border-top: 3px solid var(--ink); font-size: .73rem; }
-.scene-switch { display: inline-flex; align-items: center; gap: 7px; background: none; color: var(--ink); border: 0; padding: 9px 7px; min-height: 44px; font-size: .73rem; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
-.scene-switch:hover { background: var(--green-light); }
-.scene-switch span { font-size: 1.1rem; }
+/* Pixel field: canvas drawing and behaviour live in ThrongletField.jsx. */
+.creature-field { margin: 0; border: 3px solid var(--ink); box-shadow: 7px 7px 0 #b4bda1; background: var(--panel); }
+.field-title { display: flex; align-items: center; justify-content: space-between; padding: 11px 14px; background: var(--green-light); border-bottom: 3px solid var(--ink); font: 400 1.2rem/1.1 var(--pixel); }
+.field-title span:last-child { font: 500 .67rem/1.3 var(--body); text-transform: uppercase; letter-spacing: .08em; }
+.creature-field canvas { display: block; width: 100%; height: auto; image-rendering: pixelated; cursor: crosshair; }
+.field-controls { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 13px 14px 5px; border-top: 3px solid var(--ink); }
+.field-pause { border: 0; background: transparent; padding: 10px 0 10px 10px; color: var(--ink); font: 600 .76rem var(--body); min-height: 44px; text-decoration: underline; text-underline-offset: 4px; }
+.field-pause:hover { color: var(--rust); }
+.field-instructions { padding: 8px 14px 13px; color: var(--muted); font-size: .72rem; }
+
 .news-board { margin-bottom: 48px; position: relative; display: grid; grid-template-columns: 68px 1fr auto; align-items: center; gap: 26px; background: var(--green-light); padding: 28px 30px; border: 2px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); }
 .news-stamp { align-self: center; color: var(--green); text-align: center; }
 .news-stamp .pixel-icon { width: 42px; height: 42px; margin: 0 auto 7px; }
@@ -236,7 +238,7 @@ svg { display: block; }
   .hero-welcome { max-width: 490px; }
   .hero .text-link { font-size: .88rem; }
   .degree { margin-top: 25px; }
-  .desk { width: 100%; max-width: 445px; margin-inline: auto; }
+  .creature-field { width: 100%; max-width: 445px; margin-inline: auto; }
   .news-board { margin-bottom: 38px; padding: 22px; grid-template-columns: 1fr; }
   .news-stamp { display: none; }
   .news-board > .button { grid-column: 1; }
@@ -304,7 +306,7 @@ svg { display: block; }
 }
 @media print {
   body { font-size: 11pt; background: white; }
-  .site-nav, .menu-button, .site-footer, .desk, .skip-link { display: none !important; }
+  .site-nav, .menu-button, .site-footer, .creature-field, .skip-link { display: none !important; }
   .container { width: 100%; }
   .main-content { padding-block: 20px; }
   .hero, .detail-section, .about-grid { display: block; }
