@@ -3,13 +3,13 @@ import ThrongletField from '@/components/ThrongletField';
 import PixelIcon from '@/components/PixelIcon';
 import ProjectCard from '@/components/ProjectCard';
 import WritingList from '@/components/WritingList';
-import { profile, home, projects, posts } from '@/content/site';
+import { profile, home, projects, posts, intentlab } from '@/content/site';
 
 export const metadata = { alternates: { canonical: '/' } };
 
 export default function Home() {
   return <>
-    <section className="news-board" aria-labelledby="latest-title"><div className="news-stamp"><PixelIcon name="brain" /><span>NEW<br />BUILD</span></div><div className="news-copy"><p className="eyebrow">{home.newsLabel}</p><h2 id="latest-title">{home.newsTitle}</h2><p>{home.newsText}</p></div><Link className="button button-yellow" href="/projects/intentlab">{home.newsButton}<PixelIcon name="arrow" /></Link></section>
+    <section className="news-board" aria-labelledby="latest-title"><div className="news-stamp"><PixelIcon name="brain" /><span>NEW<br />BUILD</span></div><div className="news-copy"><p className="eyebrow">{home.newsLabel}</p><h2 id="latest-title">{home.newsTitle}</h2><p>{home.newsText}</p><p className="news-detail"><a className="text-link" href={intentlab.recognitionUrl} target="_blank" rel="noopener noreferrer">{intentlab.recognition} <span aria-hidden="true">↗</span></a></p></div><Link className="button button-yellow" href="/projects/intentlab">{home.newsButton}<PixelIcon name="arrow" /></Link></section>
     <section className="hero" aria-labelledby="hello">
       <div className="hero-copy"><h1 id="hello">{home.greeting}<br /><span>{profile.shortName}</span></h1><p className="hero-intro">{profile.introduction}</p><p className="hero-welcome">{profile.welcome}</p><div className="button-row"><Link href="/projects" className="button button-green">Explore my projects <PixelIcon name="arrow" /></Link><Link href="/about" className="text-link">About me ↗</Link></div><p className="degree">{profile.degree}</p></div>
       <ThrongletField />

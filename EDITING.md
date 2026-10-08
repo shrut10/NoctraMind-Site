@@ -14,6 +14,7 @@ This is the main file for changing the wording. You can open it in any text edit
 | The homepage announcement and its button wording | `home.newsTitle`, `home.newsText`, `home.newsButton` |
 | Other homepage headings and sentences | `home` |
 | IntentLab’s explanation, motivation and results | `intentlab` |
+| The NeuroTechX listing on the homepage and project page | `intentlab.recognition`, `intentlab.recognitionDetail` and their adjacent links |
 | Existing project names, descriptions and GitHub links | `projects` |
 | Essay titles, summaries and links | `posts` |
 | About page | `about` |
