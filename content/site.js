@@ -121,15 +121,13 @@ export const posts = [
 
 export const about = {
   title: 'About',
-  intro: 'I’m Jayashruthi Rajesh Babu, a data science student at the University of Leeds, graduating in 2027. Most people call me Shruthi; some know me as Jaya.',
+  intro: 'I’m Jayashruthi Rajesh Babu (Shruthi), a data science student at the University of Leeds, graduating in 2027.',
   paragraphs: [
     'My interests are in neuroscience, neurotechnology and artificial intelligence: how we learn, how we make decisions, and what an artificial system might be able to understand.',
     'I built IntentLab to explore brain–computer interfaces (BCI), using machine learning to classify imagined hand movements from recorded EEG. It is included in NeuroTechX’s community-curated Awesome BCI resources.',
     'My agentic AI work includes GeneCraft, a Minecraft Java plugin where agents remember conversations, share supplies and carry out gathering, mining and building jobs. I also write about consciousness, cognition and computational neuroscience.',
     'I’m working towards a career in AI and ML engineering, with an emphasis on useful systems and careful evaluation.',
   ],
-  nameNoteHeading: 'A note on my name',
-  nameNote: 'You may know me as Shruthi Rajesh, Shruthi Rajesh Babu or Jaya. The last part of my name is sometimes written Rajeshbabu, without a space. These all refer to me, Jayashruthi Rajesh Babu.',
   currentHeading: 'What I’m exploring',
   current: [
     'Brain–computer interfaces and motor imagery through IntentLab',

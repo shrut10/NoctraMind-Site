@@ -40,7 +40,7 @@ You can use paragraphs that sound like you. Keep the measured results, dataset a
 - `app/blog/page.jsx`: writing page introduction and note about the PDF.
 - `app/ClientLayout.jsx`: menu and footer wording.
 - `content/search.js`: browser-tab titles, search descriptions, link-preview wording and current research topics.
-- `content/site.js` → `profile.name` and `profile.alternateNames`: the main name and public name variants (Shruthi, Jaya and Rajeshbabu spellings). The homepage and About page also explain the identity in visible text.
+- `content/site.js` → `profile.name` and `profile.shortName`: the visible name, displayed as Jayashruthi Rajesh Babu (Shruthi). `profile.alternateNames` supplies name variants for search metadata only; do not add a visible explanation of these variants.
 - `lib/seo.js`: connects the pages, Person identity, GitHub/LinkedIn profiles and projects using structured data.
 - `app/layout.jsx`: shared metadata, crawl settings and the Person/website information. Individual page files use `pageMetadata(...)`.
 - `components/ThrongletField.jsx`: the canvas sprites, walking and hunger behaviour, Feed button and animation controls.

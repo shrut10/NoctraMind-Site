@@ -397,7 +397,5 @@ svg { display: block; }
   .end-note { flex-wrap: wrap; }
 }
 
-/* Public identity and name note, shared with the search metadata. */
+/* Full name with the preferred short name. */
 .identity-name { font-size: .95rem; font-weight: 600; color: var(--rust); margin: -7px 0 16px; line-height: 1.5; }
-.name-note { border-top: 1px solid var(--line); padding-top: 24px; margin-top: 30px; }
-.name-note h2 { font-size: 1.7rem; margin-bottom: 12px; }

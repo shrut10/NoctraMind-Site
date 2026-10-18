@@ -26,6 +26,6 @@ export default function ClientLayout({ children }) {
       </div>
     </header>
     <main id="main" className="container main-content" tabIndex={-1}>{children}</main>
-    <footer className="site-footer"><div className="container footer-inner"><div><Link className="footer-brand" href="/"><PixelIcon name="flower" />{profile.name}</Link><p>© {new Date().getFullYear()} {profile.name}</p></div><nav aria-label="Social links"><a href={profile.github} target="_blank" rel="noopener noreferrer">{ui.footerGithub} ↗</a><a href={profile.universityGithub} target="_blank" rel="noopener noreferrer">{ui.footerUniversity} ↗</a><a href={profile.linkedin} target="_blank" rel="noopener noreferrer">{ui.footerLinkedin} ↗</a><a href={`mailto:${profile.email}`}>{ui.footerEmail} ↗</a></nav></div></footer>
+    <footer className="site-footer"><div className="container footer-inner"><div><Link className="footer-brand" href="/"><PixelIcon name="flower" />{profile.name} ({profile.shortName})</Link><p>© {new Date().getFullYear()} {profile.name} ({profile.shortName})</p></div><nav aria-label="Social links"><a href={profile.github} target="_blank" rel="noopener noreferrer">{ui.footerGithub} ↗</a><a href={profile.universityGithub} target="_blank" rel="noopener noreferrer">{ui.footerUniversity} ↗</a><a href={profile.linkedin} target="_blank" rel="noopener noreferrer">{ui.footerLinkedin} ↗</a><a href={`mailto:${profile.email}`}>{ui.footerEmail} ↗</a></nav></div></footer>
   </div>;
 }
