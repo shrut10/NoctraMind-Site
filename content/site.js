@@ -66,9 +66,7 @@ export const projects = [
 export const posts = [
   { title: 'Bridging minds and machines through neural networks', excerpt: 'What would it take to upload a human brain into a computer?', topic: 'Brains & machines', format: 'Essay', link: 'https://medium.com/@rjayashruthi/bridging-minds-and-machines-through-neural-networks-9a5f06778cc2' },
   { title: 'Structural dependencies in Markov processes', excerpt: 'An overview of communicating classes, irreducibility, periodicity and the links between discrete and continuous time.', topic: 'Mathematics', format: 'PDF', link: '/pdfs/markov-essay.pdf' },
-  { title: 'Exploring the hypothesis of a cyclical universe', excerpt: 'Thinking through the idea of a universe that follows a cycle of creation and collapse.', topic: 'Cosmology', format: 'Essay', link: 'https://medium.com/@rjayashruthi/exploring-the-hypothesis-of-a-cyclical-universe-fbc11c980dc5' },
   { title: 'What Channel 4’s “Humans” teaches us about machine minds', excerpt: 'Why this series stayed with me, and the questions it raises about sentient artificial intelligence.', topic: 'Machine minds', format: 'Essay', link: 'https://medium.com/@rjayashruthi/what-channel-4s-humans-teaches-us-about-machine-minds-cc752e3f576f' },
-  { title: 'Can psychedelics aid in meditation for higher states of consciousness?', excerpt: 'An exploration of altered states, meditation and consciousness.', topic: 'Consciousness', format: 'Essay', link: 'https://medium.com/@rjayashruthi/can-psychedelics-aid-in-meditation-for-reaching-higher-states-of-consciousness-b609e6a5aa7f' },
 ];
 
 export const about = {
