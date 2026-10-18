@@ -15,11 +15,12 @@ export const profile = {
 
 export const home = {
   greeting: 'Hi, I’m',
-  newsLabel: 'Latest project',
-  newsTitle: 'GeneCraft',
-  newsText: 'Agents in Minecraft that remember conversations, gather supplies and build with you.',
-  newsButton: 'See GeneCraft',
-  newsHref: '/projects/genecraft',
+  newsLabel: 'Community recognition',
+  newsTitle: 'IntentLab',
+  newsText: 'Included in NeuroTechX’s Awesome BCI, a community-curated collection of brain–computer interface projects and resources.',
+  newsButton: 'Explore IntentLab',
+  newsHref: '/projects/intentlab',
+  newsResourceLabel: 'View the Awesome BCI listing',
   projectsHeading: 'Projects',
   projectsIntro: 'Things I’ve built, tried and tested.',
   writingHeading: 'Writing',
