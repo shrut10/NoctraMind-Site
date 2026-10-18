@@ -39,7 +39,10 @@ You can use paragraphs that sound like you. Keep the measured results, dataset a
 - `app/projects/page.jsx`: projects page introduction and featured-project layout.
 - `app/blog/page.jsx`: writing page introduction and note about the PDF.
 - `app/ClientLayout.jsx`: menu and footer wording.
-- `app/layout.jsx`: the default browser-tab title and search description. Other page files contain their own `metadata`.
+- `content/search.js`: browser-tab titles, search descriptions, link-preview wording and current research topics.
+- `content/site.js` → `profile.name` and `profile.alternateNames`: the main name and public name variants (Shruthi, Jaya and Rajeshbabu spellings). The homepage and About page also explain the identity in visible text.
+- `lib/seo.js`: connects the pages, Person identity, GitHub/LinkedIn profiles and projects using structured data.
+- `app/layout.jsx`: shared metadata, crawl settings and the Person/website information. Individual page files use `pageMetadata(...)`.
 - `components/ThrongletField.jsx`: the canvas sprites, walking and hunger behaviour, Feed button and animation controls.
 - `app/styles/globals.css`: colours, fonts, borders, spacing and button styling. The main palette and wood colours are at the very top; wooden menu styles are near the end.
 - `public/landscape.svg`: original pixel landscape behind the pages.
@@ -97,3 +100,15 @@ Reviewed against public GitHub sources on 18 October 2026. GeneCraft and IntentL
 This is a curated snapshot, so a new repository is added by editing the `genecraft`, `intentlab` or `projects` objects in `content/site.js` rather than appearing automatically. For the model comparison, the polynomial's validation MSE is 0.0307308 and the neural network's is 0.035906: about 14.4% lower relative to the neural network. The repository README's approximately 17% uses the other denominator.
 
 Use actual screenshots or published figures. Omit `image` and `imageAlt` on ordinary project cards when there is no suitable image. The original GeneCraft screenshot remains at full resolution on its project page.
+
+## Search metadata and name variants
+
+[Edit titles and search descriptions](https://github.com/shrut10/NoctraMind-Site/edit/main/content/search.js). The main identity is Jayashruthi Rajesh Babu; alternate names, including Shruthi, Jaya and the joined Rajeshbabu spelling, live under `profile.alternateNames` in `content/site.js`. Keep aliases factual. They describe one person, not separate profiles.
+
+The homepage and About page describe the current BCI, EEG, neurotechnology and agentic AI work in visible prose. IntentLab and GeneCraft have distinct descriptions, share previews and structured project data linked to the same creator. The separate IntentLab demo also identifies its creator by the full name.
+
+Keep `googleVerification` in `content/search.js`: this public tag verifies ownership of the HTTPS website in your Google Search Console account. It is not a password. Removing it can cause Google to revoke verification.
+
+After changing an individual page, update `search.updated` to the real edit date. The sitemap uses the same public-page list as the metadata. When changing the share graphic, run `npm run social-image` and change its image version in `lib/seo.js` so sharing services can fetch it again.
+
+In your verified Google Search Console property, inspect and request indexing for the homepage, About page, projects page and both project pages. The sitemap is `https://jayashruthi.com/sitemap.xml`. Metadata and structured data supply accurate context; Google chooses snippets, rankings and AI summaries. Re-crawling can take days or weeks, and a request does not guarantee inclusion. Official guidance: https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl and https://developers.google.com/search/docs/fundamentals/ai-optimization-guide.

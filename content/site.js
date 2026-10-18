@@ -3,13 +3,14 @@
 export const profile = {
   name: 'Jayashruthi Rajesh Babu',
   shortName: 'Shruthi',
+  alternateNames: ['Shruthi', 'Jaya', 'Jayashruthi', 'Jaya Shruthi', 'Shruthi Rajesh', 'Shruthi Rajesh Babu', 'Shruthi Rajeshbabu', 'Jayashruthi Rajesh', 'Jayashruthi Rajeshbabu', 'Jaya Shruthi Rajesh Babu', 'Shruthi R', 'Jayashruthi R'],
   email: 'rjayashruthi@yahoo.com',
   github: 'https://github.com/shrut10',
   universityGithub: 'https://github.com/wphs3147-uol',
   linkedin: 'https://www.linkedin.com/in/jayashruthi-r-6592101b9/',
   medium: 'https://medium.com/@rjayashruthi',
-  introduction: 'I’m a data science student at Leeds. I build things with machine learning, from EEG experiments to agents in Minecraft.',
-  welcome: 'Interested in brains, AI and how things learn.',
+  introduction: 'I’m a data science student at Leeds working on brain–computer interfaces (BCI), EEG decoding and agentic AI. I built IntentLab and GeneCraft.',
+  welcome: 'Interested in neuroscience, neurotechnology and how people and machines learn.',
   degree: 'BSc Data Science · University of Leeds · 2027',
 };
 
@@ -22,7 +23,7 @@ export const home = {
   newsHref: '/projects/intentlab',
   newsResourceLabel: 'View the Awesome BCI listing',
   projectsHeading: 'Projects',
-  projectsIntro: 'Things I’ve built, tried and tested.',
+  projectsIntro: 'Brain–computer interfaces, AI agents and machine learning projects.',
   writingHeading: 'Writing',
   writingIntro: 'Essays on neuroscience, artificial intelligence and mathematics',
   contactHeading: 'Contact',
@@ -35,7 +36,7 @@ export const ui = {
   projectsButton: 'My projects', aboutButton: 'About me', allProjects: 'All projects',
   allWriting: 'All writing', contactButton: 'Get in touch', codeButton: 'Source code',
   projectButton: 'About the project', demoButton: 'Try the demo', backProjects: '← Back to projects',
-  projectsTitle: 'Projects', projectsIntro: 'Minecraft agents, brain signals and a few other experiments.',
+  projectsTitle: 'Projects', projectsIntro: 'Brain–computer interfaces, agentic AI and machine learning: IntentLab, GeneCraft and more.',
   moreProjects: 'More projects', githubButton: 'More on GitHub',
   writingTitle: 'Writing', writingIntro: 'Essays on consciousness, neuroscience and mathematics',
   essaysLabel: 'Essays', entriesLabel: 'entries', mediumButton: 'My Medium',
@@ -120,15 +121,19 @@ export const posts = [
 
 export const about = {
   title: 'About',
-  intro: 'I’m Jayashruthi Rajesh Babu, usually known as Shruthi, and I’m completing a BSc in Data Science at the University of Leeds, graduating in 2027.',
+  intro: 'I’m Jayashruthi Rajesh Babu, a data science student at the University of Leeds, graduating in 2027. Most people call me Shruthi; some know me as Jaya.',
   paragraphs: [
-    'I’m interested in the overlap between human minds and machines: how we learn, how we make decisions, and what an artificial system might be able to understand.',
-    'I explore these questions through machine learning projects, automation tools and experiments with AI agents, alongside writing about consciousness, cognition and computational neuroscience.',
-    'I’m working towards a career in AI and ML engineering, with an emphasis on building useful systems and understanding the evidence behind their performance.',
+    'My interests are in neuroscience, neurotechnology and artificial intelligence: how we learn, how we make decisions, and what an artificial system might be able to understand.',
+    'I built IntentLab to explore brain–computer interfaces (BCI), using machine learning to classify imagined hand movements from recorded EEG. It is included in NeuroTechX’s community-curated Awesome BCI resources.',
+    'My agentic AI work includes GeneCraft, a Minecraft Java plugin where agents remember conversations, share supplies and carry out gathering, mining and building jobs. I also write about consciousness, cognition and computational neuroscience.',
+    'I’m working towards a career in AI and ML engineering, with an emphasis on useful systems and careful evaluation.',
   ],
+  nameNoteHeading: 'A note on my name',
+  nameNote: 'You may know me as Shruthi Rajesh, Shruthi Rajesh Babu or Jaya. The last part of my name is sometimes written Rajeshbabu, without a space. These all refer to me, Jayashruthi Rajesh Babu.',
   currentHeading: 'What I’m exploring',
   current: [
     'Brain–computer interfaces and motor imagery through IntentLab',
+    'Agentic AI, persistent memory and shared worlds through GeneCraft',
     'Deep learning and explainable AI in my final year',
     'The relationship between pattern recognition and understanding',
   ],

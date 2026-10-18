@@ -1,3 +1,5 @@
+import { search } from '@/content/search';
+
 export default function sitemap() {
-  return ['', '/projects', '/projects/genecraft', '/projects/intentlab', '/blog', '/about', '/contact'].map(path => ({ url: `https://jayashruthi.com${path}`, lastModified: '2026-10-18', changeFrequency: 'monthly', priority: path === '' ? 1 : 0.7 }));
+  return Object.values(search.pages).map(page => ({ url: `${search.url}${page.path}`, lastModified: search.updated, changeFrequency: 'monthly', priority: page.path === '/' ? 1 : 0.7 }));
 }

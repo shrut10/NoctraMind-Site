@@ -1,1 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><path fill="#f8f3e5" d="M0 0h1200v630H0z"/><path fill="#293f32" d="M0 0h1200v12H0zM0 618h1200v12H0zM0 0h12v630H0zM1188 0h12v630h-12z"/><path fill="#dde7ca" d="M810 78h310v408H810z"/><path fill="#293f32" d="M810 78h310v6H810zM810 480h310v6H810zM810 78h6v408h-6zM1114 78h6v408h-6z"/><g fill="#3d6247" transform="translate(836 135) scale(11)"><path d="M11 12H7V10H5V6H9V8H11V12H13V6H15V4H21V8H19V10H15V12H13V20H19V22H5V20H11Z"/></g><text x="72" y="123" font-family="monospace" font-size="21" fill="#5d6552">AI · ML · BRAINS · MACHINES</text><text x="68" y="263" font-family="monospace" font-weight="bold" font-size="105" fill="#293f32">Hi, I’m</text><text x="68" y="377" font-family="monospace" font-weight="bold" font-size="116" fill="#3d6247">Shruthi</text><text x="76" y="460" font-family="sans-serif" font-size="28" fill="#293f32">Data science and machine learning</text><path fill="#edc469" stroke="#293f32" stroke-width="4" d="M73 515h1050v60H73z"/><text x="96" y="555" font-family="monospace" font-size="23" fill="#293f32">jayashruthi.com</text><text x="676" y="555" font-family="monospace" font-size="19" fill="#293f32">Latest project: IntentLab →</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <path fill="#91cbd3" d="M0 0h1200v630H0z"/>
+  <path fill="#5b8c60" d="M0 350h1200v280H0z"/>
+  <path fill="#7eac57" d="M0 450h1200v180H0z"/>
+  <path fill="#583821" d="M24 24h1152v582H24z"/>
+  <path fill="#d9ac67" d="M30 30h1140v570H30z"/>
+  <path fill="#f4ebcd" d="M38 38h1124v554H38z"/>
+  <text x="76" y="103" font-family="monospace" font-size="22" fill="#874b2c">SHRUTHI · JAYA</text>
+  <text x="72" y="210" font-family="monospace" font-weight="bold" font-size="76" fill="#34432b">Jayashruthi</text>
+  <text x="72" y="292" font-family="monospace" font-weight="bold" font-size="72" fill="#346e40">Rajesh Babu</text>
+  <text x="78" y="359" font-family="sans-serif" font-size="29" fill="#34432b">Brain–computer interfaces · Agentic AI</text>
+  <text x="78" y="406" font-family="sans-serif" font-size="25" fill="#626044">Neuroscience · EEG · Machine learning</text>
+  <text x="78" y="465" font-family="monospace" font-size="24" fill="#346e40">IntentLab / GeneCraft</text>
+  <path fill="#583821" d="M842 98h268v360H842z"/>
+  <path fill="#514661" d="M848 104h256v348H848z"/>
+  <g transform="translate(878 154) scale(8)" fill="#e4c69d" fill-rule="evenodd" shape-rendering="crispEdges"><path d="M6 2H10V4H14V2H18V4H20V8H22V16H20V20H16V22H8V20H4V16H2V8H4V4H6ZM11 6V18H13V6ZM6 8V10H9V8ZM15 12V14H18V12Z"/></g>
+  <path d="M870 381h24v-16h16v38h18v-56h16v72h16v-38h26v-16h16v38h18v-56h16v72h16v-38h30" fill="none" stroke="#d9c2dc" stroke-width="6" shape-rendering="crispEdges"/>
+  <path fill="#9b6034" stroke="#583821" stroke-width="4" d="M76 511h1034v60H76z"/>
+  <path stroke="#d8a569" stroke-width="3" d="M80 516h1026"/>
+  <text x="96" y="550" font-family="sans-serif" font-size="23" fill="#fff0bc">IntentLab · NeuroTechX Awesome BCI</text>
+  <text x="794" y="550" font-family="monospace" font-size="22" fill="#fff0bc">jayashruthi.com</text>
+</svg>

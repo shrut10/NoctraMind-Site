@@ -2,11 +2,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import PixelIcon from '@/components/PixelIcon';
 import { intentlab, ui } from '@/content/site';
+import StructuredData from '@/components/StructuredData';
+import { pageMetadata, pageData } from '@/lib/seo';
 
-export const metadata = { title: 'IntentLab — decoding imagined movement', description: intentlab.description, alternates: { canonical: '/projects/intentlab' } };
+export const metadata = pageMetadata('intentlab');
 
 export default function IntentLab() {
-  return <>
+  return <><StructuredData data={pageData('intentlab')} />
     <Link href="/projects" className="text-link breadcrumb">{ui.backProjects}</Link>
     <header className="project-heading"><p className="eyebrow">Brain–computer interfaces · Personal project</p><h1>{intentlab.title}<PixelIcon name="brain" /></h1><p className="project-subtitle">{intentlab.subtitle}</p><p className="project-summary">{intentlab.description}</p><div className="button-row"><a className="button button-green" href={intentlab.live} target="_blank" rel="noopener noreferrer">Try the live experiment <span aria-hidden="true">↗</span></a><a className="button" href={intentlab.github} target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a></div></header>
     <figure className="project-screenshot"><Image src={intentlab.image} alt={intentlab.imageAlt} width={1440} height={1024} sizes="(max-width: 1200px) 100vw, 1120px" /></figure>

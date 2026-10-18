@@ -6,17 +6,22 @@ import '@fontsource/dm-sans/latin-600.css';
 import '@fontsource/dm-sans/latin-700.css';
 import './styles/globals.css';
 import ClientLayout from './ClientLayout';
+import StructuredData from '@/components/StructuredData';
+import { identityData, pageMetadata } from '@/lib/seo';
+import { profile } from '@/content/site';
+import { search } from '@/content/search';
 
 export const metadata = {
-  metadataBase: new URL('https://jayashruthi.com'),
-  title: { default: 'Shruthi | Data science and machine learning', template: '%s | Shruthi' },
-  description: 'Jayashruthi Rajesh Babu — data science student at Leeds, building AI and ML projects and writing about brains, minds and machines.',
-  authors: [{ name: 'Jayashruthi Rajesh Babu' }],
-  creator: 'Jayashruthi Rajesh Babu',
-  openGraph: { type: 'website', locale: 'en_GB', siteName: 'Shruthi’s portfolio', images: [{ url: '/social-card.png', width: 1200, height: 630, alt: 'Shruthi — Data science and machine learning' }] },
-  twitter: { card: 'summary_large_image', images: ['/social-card.png'] },
+  ...pageMetadata('home'),
+  metadataBase: new URL(search.url),
+  title: { default: search.pages.home.title, template: `%s | ${profile.name}` },
+  authors: [{ name: profile.name, url: `${search.url}/about` }],
+  creator: profile.name,
+  verification: { google: search.googleVerification },
+  category: 'Neurotechnology and artificial intelligence',
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 } },
 };
 
 export default function RootLayout({ children }) {
-  return <html lang="en-GB"><body><ClientLayout>{children}</ClientLayout></body></html>;
+  return <html lang="en-GB"><body><StructuredData data={identityData()} /><ClientLayout>{children}</ClientLayout></body></html>;
 }
