@@ -30,19 +30,19 @@ function drawScene(ctx, creatures, apples, time) {
     rect('#e99166', x + 2, y + 2, 2, 2);
     rect('#9d4534', x + 2, y + 7, 6, 2);
   };
-  rect('#cbded2', 0, 0, WIDTH, HEIGHT);
-  rect('#e8e8ce', 249, 16, 23, 23);
+  rect('#91cbd3', 0, 0, WIDTH, HEIGHT);
+  rect('#ffe5a0', 249, 16, 23, 23);
   // Distant hedgerows, an open meadow and an irregular earth path.
   for (let i = 0; i < 10; i++) {
-    rect(i % 2 ? '#93b794' : '#a4bfa0', i * 43 - 15, 44 + (i % 3) * 5, 58, 30);
+    rect(i % 2 ? '#5c9c7d' : '#76b28b', i * 43 - 15, 44 + (i % 3) * 5, 58, 30);
   }
-  rect('#88a86a', 0, 72, WIDTH, HEIGHT - 72);
-  rect('#99b775', 9, 96, 342, 160);
-  rect('#a9bd79', 45, 139, 251, 79);
-  rect('#a9bd79', 76, 119, 192, 116);
-  rect('#bdba85', 153, 89, 36, 18);
-  rect('#c9bf90', 160, 103, 38, 21);
-  rect('#c9bf90', 180, 117, 44, 14);
+  rect('#5c933b', 0, 72, WIDTH, HEIGHT - 72);
+  rect('#7ab34a', 9, 96, 342, 160);
+  rect('#91bd52', 45, 139, 251, 79);
+  rect('#91bd52', 76, 119, 192, 116);
+  rect('#c9aa70', 153, 89, 36, 18);
+  rect('#dfbb7a', 160, 103, 38, 21);
+  rect('#dfbb7a', 180, 117, 44, 14);
   // Fence rails sit behind the creatures.
   rect('#8e7650', 0, 83, 153, 4);
   rect('#8e7650', 190, 83, 170, 4);
@@ -57,18 +57,18 @@ function drawScene(ctx, creatures, apples, time) {
   for (let i = 0; i < 75; i++) {
     const x = (i * 79 + 13) % WIDTH;
     const y = 102 + (i * 43) % 149;
-    rect(i % 3 ? '#8ea66a' : '#bac785', x, y, 3, 2);
-    if (i % 3 === 0) rect('#78915e', x + 3, y - 2, 1, 4);
+    rect(i % 3 ? '#68a43d' : '#b6d26a', x, y, 3, 2);
+    if (i % 3 === 0) rect('#4c8535', x + 3, y - 2, 1, 4);
   }
   const tree = (x, y) => {
     rect('#8b9c60', x - 13, y + 25, 40, 6);
     rect('#876145', x + 3, y, 8, 29);
     rect('#af8251', x + 3, y, 3, 27);
-    rect('#456b49', x - 19, y - 21, 49, 26);
-    rect('#527c4e', x - 24, y - 39, 57, 29);
-    rect('#618b54', x - 17, y - 52, 44, 37);
-    rect('#75965b', x - 10, y - 58, 29, 26);
-    rect('#86a364', x - 8, y - 48, 9, 5);
+    rect('#285d3b', x - 19, y - 21, 49, 26);
+    rect('#397943', x - 24, y - 39, 57, 29);
+    rect('#539343', x - 17, y - 52, 44, 37);
+    rect('#6cab4c', x - 10, y - 58, 29, 26);
+    rect('#92c45b', x - 8, y - 48, 9, 5);
     apple(x - 13, y - 22); apple(x + 14, y - 30);
   };
   tree(39, 97); tree(310, 99);

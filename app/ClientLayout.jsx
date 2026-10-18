@@ -4,15 +4,9 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useRef, useState } from 'react';
 import PixelIcon from '@/components/PixelIcon';
-import { profile } from '@/content/site';
+import { profile, ui } from '@/content/site';
 
-const links = [
-  { href: '/', label: 'Home' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/blog', label: 'Writing' },
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
-];
+const links = ui.navigation;
 
 export default function ClientLayout({ children }) {
   const pathname = usePathname();
@@ -32,6 +26,6 @@ export default function ClientLayout({ children }) {
       </div>
     </header>
     <main id="main" className="container main-content" tabIndex={-1}>{children}</main>
-    <footer className="site-footer"><div className="container footer-inner"><div><Link className="footer-brand" href="/"><PixelIcon name="flower" />Jayashruthi Rajesh Babu</Link><p>© {new Date().getFullYear()} {profile.name}</p></div><nav aria-label="Social links"><a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href={profile.universityGithub} target="_blank" rel="noopener noreferrer">University code ↗</a><a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href={`mailto:${profile.email}`}>Email ↗</a></nav></div></footer>
+    <footer className="site-footer"><div className="container footer-inner"><div><Link className="footer-brand" href="/"><PixelIcon name="flower" />{profile.name}</Link><p>© {new Date().getFullYear()} {profile.name}</p></div><nav aria-label="Social links"><a href={profile.github} target="_blank" rel="noopener noreferrer">{ui.footerGithub} ↗</a><a href={profile.universityGithub} target="_blank" rel="noopener noreferrer">{ui.footerUniversity} ↗</a><a href={profile.linkedin} target="_blank" rel="noopener noreferrer">{ui.footerLinkedin} ↗</a><a href={`mailto:${profile.email}`}>{ui.footerEmail} ↗</a></nav></div></footer>
   </div>;
 }

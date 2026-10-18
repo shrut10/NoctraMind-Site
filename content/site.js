@@ -8,29 +8,72 @@ export const profile = {
   universityGithub: 'https://github.com/wphs3147-uol',
   linkedin: 'https://www.linkedin.com/in/jayashruthi-r-6592101b9/',
   medium: 'https://medium.com/@rjayashruthi',
-  introduction: 'I’m a data science student at the University of Leeds, building machine learning systems and exploring how we understand the brain through computation.',
-  welcome: 'My interests include neural interfaces, artificial intelligence and consciousness',
+  introduction: 'I’m a data science student at Leeds. I build things with machine learning, from EEG experiments to agents in Minecraft.',
+  welcome: 'Interested in brains, AI and how things learn.',
   degree: 'BSc Data Science · University of Leeds · 2027',
 };
 
 export const home = {
   greeting: 'Hi, I’m',
   newsLabel: 'Latest project',
-  newsTitle: 'IntentLab',
-  newsText: 'My latest project uses recorded EEG to classify imagined left and right hand movements, exploring how brain signals could control a computer',
-  newsButton: 'View project',
+  newsTitle: 'GeneCraft',
+  newsText: 'Agents in Minecraft that remember conversations, gather supplies and build with you.',
+  newsButton: 'See GeneCraft',
+  newsHref: '/projects/genecraft',
   projectsHeading: 'Projects',
-  projectsIntro: 'Selected personal projects and university work, with source code and documented results',
+  projectsIntro: 'Things I’ve built, tried and tested.',
   writingHeading: 'Writing',
   writingIntro: 'Essays on neuroscience, artificial intelligence and mathematics',
   contactHeading: 'Contact',
-  contactText: 'I’d love to hear about interesting AI projects, graduate opportunities or an idea you want to talk through.',
+  contactText: 'Have a project in mind, or want to talk about my work? Send me a message.',
+};
+
+// Headings, navigation and short labels used across the site.
+export const ui = {
+  navigation: [{ href: '/', label: 'Home' }, { href: '/projects', label: 'Projects' }, { href: '/blog', label: 'Writing' }, { href: '/about', label: 'About' }, { href: '/contact', label: 'Contact' }],
+  projectsButton: 'My projects', aboutButton: 'About me', allProjects: 'All projects',
+  allWriting: 'All writing', contactButton: 'Get in touch', codeButton: 'Source code',
+  projectButton: 'About the project', demoButton: 'Try the demo', backProjects: '← Back to projects',
+  projectsTitle: 'Projects', projectsIntro: 'Minecraft agents, brain signals and a few other experiments.',
+  moreProjects: 'More projects', githubButton: 'More on GitHub',
+  writingTitle: 'Writing', writingIntro: 'Essays on consciousness, neuroscience and mathematics',
+  essaysLabel: 'Essays', entriesLabel: 'entries', mediumButton: 'My Medium',
+  writingNote: 'My essays are on Medium. The Markov processes paper is a PDF.',
+  emailButton: 'Write me an email', letterTo: 'To: Shruthi',
+  contactLinks: [{ title: 'GitHub', text: 'My personal projects', key: 'github' }, { title: 'University code', text: 'Coursework and group projects', key: 'universityGithub' }, { title: 'LinkedIn', text: 'Work and opportunities', key: 'linkedin' }],
+  footerGithub: 'GitHub', footerUniversity: 'University code', footerLinkedin: 'LinkedIn', footerEmail: 'Email',
+};
+
+export const genecraft = {
+  title: 'GeneCraft',
+  kind: 'Minecraft · Agent sandbox',
+  subtitle: 'Agents you can talk to, build with and leave a job to do.',
+  description: 'A Minecraft Java plugin with named agents, saved memory and jobs that carry on between conversations. Ask an agent to collect wood, mine a tunnel or build a starter house from shared supplies.',
+  image: '/projects/genecraft.png',
+  imageAlt: 'GeneCraft in Minecraft: a woodcutter agent accepts a request to gather 32 logs and save planks to shared supplies.',
+  imageCaption: 'The woodcutter accepting a gathering job in my Minecraft world.',
+  github: 'https://github.com/shrut10/genecraft',
+  release: 'https://github.com/shrut10/genecraft/releases/latest',
+  releaseButton: 'Get the plugin',
+  stack: ['Java', 'Paper', 'Python', 'Agent memory'],
+  question: 'What can an agent actually do in a world you share?',
+  howHeading: 'In the game',
+  implementationHeading: 'Under the hood',
+  motivation: 'I wanted agents that could do more than reply in chat. GeneCraft gives each one a visible place in Minecraft, things to remember and work to carry out. A woodcutter can gather materials for a builder, and their jobs and supplies survive a server restart.',
+  implementation: 'A local Python bridge interprets requests. The Paper plugin checks the chosen action and runs the work in the game. Gathering, mining and building continue locally without asking a model what to do for every block.',
+  limits: 'Requires Minecraft Java Edition and a Paper server. AI chat uses an optional local bridge and an eligible ChatGPT account. The pathfinding demo runs without connecting an AI account.',
+  affiliation: 'Independent community project, not an official Minecraft product or service. Not approved by or associated with Mojang or Microsoft.',
+  steps: [
+    { title: 'Give an agent a job', text: 'Talk in game to ask for wood, a tunnel or a small house. Each agent has its own name and saved memory.' },
+    { title: 'Watch the work', text: 'Agents move through the world and use shared supplies. Jobs pause when you leave the work area.' },
+    { title: 'Pick up where you left off', text: 'Goals, jobs and supplies persist. You can check progress or cancel a job from Minecraft chat.' },
+  ],
 };
 
 export const intentlab = {
   title: 'IntentLab',
-  subtitle: 'Decoding imagined movement from recorded brain signals',
-  description: 'IntentLab predicts imagined left or right fist movement from recorded EEG, with an interactive demonstration that shows how model confidence affects cursor control.',
+  subtitle: 'Can EEG tell left from right when you imagine a movement?',
+  description: 'An experiment with recorded EEG and imagined hand movements. Pick a recording, run the model and see when it makes a prediction or holds back.',
   live: 'https://intentlab-bci.vercel.app',
   github: 'https://github.com/shrut10/intentlab-bci',
   recognition: 'Included in NeuroTechX’s community-curated Awesome BCI resources',
@@ -39,7 +82,15 @@ export const intentlab = {
   recognitionContribution: 'https://github.com/NeuroTechX/awesome-bci/pull/100',
   teachingUrl: 'https://github.com/shrut10/intentlab-bci/blob/main/docs/TEACHING.md',
   question: 'Could imagining a movement become a useful way to control a computer?',
-  motivation: 'I built IntentLab to investigate whether machine learning could identify imagined movement in EEG recordings from people it had not encountered during training, connecting my interest in neuroscience with the practical challenges of developing neural interfaces.',
+  motivation: 'I wanted to see whether a model trained on some people’s EEG could recognise imagined movement in someone else’s recordings. IntentLab lets you inspect those predictions, including the ones it gets wrong.',
+  kind: 'EEG · Brain–computer interfaces',
+  image: '/projects/intentlab.png',
+  imageAlt: 'Recorded EEG traces, recording controls and left and right probabilities in IntentLab’s pixel-art demo.',
+  detailHeadings: { community: 'Community resources', question: 'The question', demo: 'How to use it', result: 'Results on unseen people', implementation: 'How it works' },
+  implementation: [
+    'The training pipeline compares simple baselines with a compact convolutional network, using public EEG recordings. The selected model runs through ONNX and FastAPI.',
+    'Since the first demo, I’ve added a calibration and alignment comparison, a participant reliability audit, and a chronological calibration example for MOABB. The saved results and teaching exercise are available alongside the code.',
+  ],
   limitation: 'The demonstration replays recorded experiments to classify two imagined movements; it has no live headset connection, cannot read thoughts and is not a medical device.',
   result: '61.1%',
   resultLabel: 'Balanced accuracy on unseen participants',
@@ -55,12 +106,9 @@ export const intentlab = {
 };
 
 export const projects = [
-  { id: 'housing', kind: 'Group coursework', icon: 'house', title: 'House prices & neighbourhoods', description: 'A group project combining neural networks with neighbourhood graph features to predict California house prices, reporting a 35% reduction in test error against its baseline.', tags: ['Python', 'Neural networks', 'Graph features'], link: 'https://github.com/shrut10/House-Price-Prediction' },
-  { id: 'agent', kind: 'Personal project', icon: 'terminal', title: 'Desktop automation agent', description: 'A macOS automation agent combining screen reading, action planning and SQLite memory to carry out tasks described in everyday language.', tags: ['Python', 'LLMs', 'OCR', 'SQLite'], link: 'https://github.com/wphs3147-uol/ai-agent-tool' },
-  { id: 'evolution', kind: 'Experiment', icon: 'sprout', title: 'Evolutionary optimisation', description: 'Controlled trials investigating how population size and mutation rate affect convergence, performance and variation across evolutionary algorithms.', tags: ['Python', 'Optimisation', 'Statistics'], link: 'https://github.com/shrut10/Evolutionary-Optimisation' },
-  { id: 'pagerank', kind: 'Project', icon: 'network', title: 'PageRank visualiser', description: 'A web crawler, a SQLite link graph and an iterative PageRank implementation, with a D3 visualiser to explore how pages connect.', tags: ['Python', 'SQLite', 'PageRank', 'D3'], link: 'https://github.com/shrut10/pagerank' },
-  { id: 'shakespeare', kind: 'Group coursework', icon: 'book', title: 'Evolving Shakespeare', description: 'A genetic algorithm that evolves random strings towards a target Shakespearean sonnet through selection, mutation and crossover.', tags: ['Genetic algorithms', 'Optimisation'], link: 'https://github.com/wphs3147-uol/MATH1604-group-project' },
-  { id: 'portfolio', kind: 'You are here', icon: 'flower', title: 'Portfolio website', description: 'A Next.js portfolio featuring an interactive pixel-art simulation, accessible navigation and a central file for editing the main website copy.', tags: ['Next.js', 'React', 'CSS'], link: 'https://github.com/shrut10/NoctraMind-Site' },
+  { id: 'comparison', kind: 'Machine learning · Individual coursework', icon: 'network', title: 'Neural network vs polynomial regression', description: 'Two models, the same noisy data. The five-parameter polynomial fit had about 14% lower held-out MSE than the neural network. Includes the analysis, report and an interactive plot.', tags: ['PyTorch', 'NumPy', 'Plotly', 'pytest'], image: '/projects/model-comparison.png', imageAlt: 'Published comparison plot showing polynomial and neural-network fits over the training and validation data.', link: 'https://github.com/shrut10/Neural-Network-vs-Polynomial-Regression-for-Function-Approximation' },
+  { id: 'housing', kind: 'Group coursework', icon: 'house', title: 'House prices & neighbourhoods', description: 'Our group added neighbourhood graph features to a neural-network model of California house prices. Test MSE fell from 0.2569 to 0.1672, a 34.9% reduction against the baseline.', tags: ['Python', 'scikit-learn', 'Graph features'], link: 'https://github.com/shrut10/House-Price-Prediction' },
+  { id: 'pagerank', kind: 'Earlier project', icon: 'network', title: 'PageRank visualiser', description: 'A web crawler and SQLite link graph, with an iterative PageRank implementation and a D3 view of how pages connect.', tags: ['Python', 'SQLite', 'PageRank', 'D3'], link: 'https://github.com/shrut10/pagerank' },
 ];
 
 export const posts = [
