@@ -16,11 +16,11 @@ export const profile = {
 
 export const home = {
   greeting: 'Hi, I’m',
-  newsLabel: 'Community recognition',
-  newsTitle: 'IntentLab',
-  newsText: 'Included in NeuroTechX’s Awesome BCI, a community-curated collection of brain–computer interface projects and resources.',
+  newsLabel: 'Research update',
+  newsTitle: 'Learning from unlabelled EEG',
+  newsText: 'I’ve added an IntentLab study comparing masked-channel pretraining with learning from scratch, alongside clearer timing measurements and an audit of a separate intracortical dataset.',
   newsButton: 'Explore IntentLab',
-  newsHref: '/projects/intentlab',
+  newsHref: '/projects/intentlab#pretraining',
   newsResourceLabel: 'View the Awesome BCI listing',
   projectsHeading: 'Projects',
   projectsIntro: 'Brain–computer interfaces, AI agents and machine learning projects.',
@@ -93,6 +93,12 @@ export const intentlab = {
     'The training pipeline compares simple baselines with a compact convolutional network, using public EEG recordings. The selected model runs through ONNX and FastAPI.',
     'Since the first demo, I’ve added a calibration and alignment comparison, a participant reliability audit, and a chronological calibration example for MOABB. The saved results and teaching exercise are available alongside the code.',
   ],
+  researchUpdate: {
+    heading: 'Learning from unlabelled EEG',
+    description: 'I compared masked-channel pretraining with the same model trained from scratch, using 252 or 2,832 movement labels. The report includes all three seeds and explains why these are exploratory validation results, not a new independent test.',
+    detail: 'The demo now separates server processing from browser round-trip time and the three-second recording window. I also checked the public metadata and access status of a separate intracortical dataset; its recordings were unavailable to download and have not been used for training.',
+    link: 'https://intentlab-bci.vercel.app/research/pretraining',
+  },
   limitation: 'The demonstration replays recorded experiments to classify two imagined movements; it has no live headset connection, cannot read thoughts and is not a medical device.',
   result: '61.1%',
   resultLabel: 'Balanced accuracy on unseen participants',
