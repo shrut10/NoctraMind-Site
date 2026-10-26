@@ -12,14 +12,14 @@
   "dependencies": {
     "@fontsource/dm-sans": "^5.2.8",
     "@fontsource/pixelify-sans": "^5.2.5",
-    "next": "15.5.27",
+    "next": "15.5.28",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
     "eslint": "^9.39.0",
-    "eslint-config-next": "15.5.27",
+    "eslint-config-next": "15.5.28",
     "sharp": "0.35.5"
   },
   "engines": {
