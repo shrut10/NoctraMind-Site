@@ -15,6 +15,7 @@ The quickest places to start are `home.newsTitle` and `home.newsText` (the homep
 | Your identity metadata, email and social links | `profile` |
 | The homepage announcement and its button wording | `home.newsTitle`, `home.newsText`, `home.newsButton` |
 | Other homepage headings and sentences | `home` |
+| The quote beneath the Thronglets field and its attribution | `thronglets` |
 | Menu labels, buttons, section headings and page taglines | `ui` |
 | GeneCraft’s page, screenshot caption and download link | `genecraft` |
 | IntentLab’s explanation, motivation and results | `intentlab` |

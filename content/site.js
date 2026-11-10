@@ -30,6 +30,15 @@ export const home = {
   contactText: 'Enquiries about projects, research and AI or ML opportunities',
 };
 
+export const thronglets = {
+  // Plaything English subtitles, 00:11:39.400 to 00:11:44.400
+  // Also quoted at https://recenserie.com/black-mirror-7x04-recensione-netflix-thronglets.html
+  quote: 'You’re looking at the first lifeforms in history whose biology is entirely digital',
+  speaker: 'Colin Ritman',
+  source: 'Black Mirror, Plaything',
+  sourceUrl: 'https://www.netflix.com/tudum/articles/black-mirror-plaything-ending-explained',
+};
+
 // Headings, navigation and short labels used across the site.
 export const ui = {
   navigation: [{ href: '/', label: 'Home' }, { href: '/projects', label: 'Projects' }, { href: '/blog', label: 'Writing' }, { href: '/about', label: 'About' }, { href: '/contact', label: 'Contact' }],

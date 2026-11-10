@@ -4,7 +4,7 @@
   --panel: #0b0b0b;
   --ink: #ededed;
   --muted: #b1b1b1;
-  --accent: #81ffc6;
+  --accent: #39ff14;
   --accent-panel: #101713;
   --lilac: #b5a3ff;
   --peach: #151515;
@@ -421,6 +421,11 @@ h3 { font-size: 1.13rem; }
 .field-title span:last-child { text-transform: none; letter-spacing: 0; color: var(--muted); font-size: .72rem; }
 .field-controls { border-top: 1px solid #303735; padding: 10px 11px 3px; }
 .field-instructions { padding: 8px 12px 12px; }
+.field-quote { margin: 0; padding: 12px 14px 14px; border-top: 1px solid var(--line); font-size: .8rem; line-height: 1.6; color: var(--accent); }
+.field-quote footer { margin-top: 7px; color: var(--muted); font-size: .68rem; }
+.field-quote cite { font-style: normal; }
+.field-quote a { text-decoration-color: var(--line); }
+.field-quote a:hover { color: var(--accent); }
 .field-pause { min-height: 42px; padding: 8px 11px; font-size: .75rem; }
 .page-section { margin-top: 56px; }
 .section-heading { border-top: 1px solid var(--line); padding-top: 25px; margin-bottom: 22px; }

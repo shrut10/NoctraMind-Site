@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { thronglets } from '@/content/site';
 
 const WIDTH = 360;
 const HEIGHT = 256;
@@ -236,6 +237,10 @@ export default function ThrongletField() {
     <canvas ref={canvas} width={WIDTH} height={HEIGHT} role="img" aria-label="Six golden pixel creatures in a misty Pacific Northwest forest clearing with dark fir trees, mountain ridges and wet ground" aria-describedby="field-instructions" onPointerDown={feedAtPointer} />
     <div className="field-controls"><button type="button" className="button button-small" onClick={() => simulation.current?.feed()}>Feed <span aria-hidden="true">+</span></button><button type="button" className="field-pause" onClick={toggleAnimation}>{paused ? 'Resume animation' : 'Pause animation'}</button></div>
     <p id="field-instructions" className="field-instructions">Click the field or use Feed to drop an apple</p>
+    <blockquote className="field-quote">
+      <p>“{thronglets.quote}”</p>
+      <footer>{thronglets.speaker} · <cite><a href={thronglets.sourceUrl} target="_blank" rel="noopener noreferrer">{thronglets.source}</a></cite></footer>
+    </blockquote>
     <span className="sr-only" role="status">{message}</span>
   </figure>;
 }
