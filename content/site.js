@@ -22,6 +22,13 @@ export const home = {
   newsButton: 'Explore IntentLab',
   newsHref: '/projects/intentlab#pretraining',
   newsResourceLabel: 'Included in NeuroTechX’s Awesome BCI resources',
+  writingUpdate: {
+    label: 'New essay',
+    title: 'On Rogue Agents',
+    text: 'An essay on AI agents, permission and the limits of autonomy',
+    href: 'https://medium.com/@rjayashruthi/on-rogue-agents-0623c9ae57c1',
+    button: 'Read on Medium',
+  },
   projectsHeading: 'Projects',
   projectsIntro: 'Brain computer interfaces, AI agents and machine learning projects',
   writingHeading: 'Writing',
@@ -47,7 +54,7 @@ export const ui = {
   projectButton: 'About the project', demoButton: 'Try the demo', backProjects: '← Back to projects',
   projectsTitle: 'Projects', projectsIntro: 'Projects in brain computer interfaces, agentic AI and machine learning',
   moreProjects: 'More projects', githubButton: 'More on GitHub',
-  writingTitle: 'Writing', writingIntro: 'Essays on consciousness, neuroscience and mathematics',
+  writingTitle: 'Writing', writingIntro: 'Essays on artificial intelligence, consciousness, neuroscience and mathematics',
   essaysLabel: 'Essays', entriesLabel: 'entries', mediumButton: 'Medium',
   writingNote: 'Essays are available on Medium and the Markov processes paper is available as a PDF',
   emailButton: 'Email', letterTo: 'Email',
@@ -129,6 +136,7 @@ export const projects = [
 ];
 
 export const posts = [
+  { title: 'On Rogue Agents', excerpt: 'An essay on AI agents, permission and the limits of autonomy, examining what happens when systems act beyond their authorised access', topic: 'AI agents & safety', format: 'Essay', link: 'https://medium.com/@rjayashruthi/on-rogue-agents-0623c9ae57c1' },
   { title: 'Bridging minds and machines through neural networks', excerpt: 'An essay on neural networks and the possibility of representing a human brain in a computer', topic: 'Brains & machines', format: 'Essay', link: 'https://medium.com/@rjayashruthi/bridging-minds-and-machines-through-neural-networks-9a5f06778cc2' },
   { title: 'Structural dependencies in Markov processes', excerpt: 'An overview of communicating classes, irreducibility, periodicity and the links between discrete and continuous time', topic: 'Mathematics', format: 'PDF', link: '/pdfs/markov-essay.pdf' },
   { title: 'What Channel 4’s “Humans” teaches us about machine minds', excerpt: 'An essay on the questions about sentient artificial intelligence raised by Channel 4’s Humans', topic: 'Machine minds', format: 'Essay', link: 'https://medium.com/@rjayashruthi/what-channel-4s-humans-teaches-us-about-machine-minds-cc752e3f576f' },

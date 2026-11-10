@@ -414,6 +414,8 @@ h3 { font-size: 1.13rem; }
 .news-copy h2 { font-size: 1.2rem; line-height: 1.45; margin: 8px 0 13px; color: var(--accent); }
 .news-copy > p:not(.eyebrow) { font-size: 1rem; line-height: 1.8; color: var(--muted); }
 .news-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 22px; }
+.news-board-small { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); }
+.news-board-small .news-actions { margin-top: 14px; }
 .text-link, a.text-link, .resource-links a, .footer-inner nav a, .email-address, .writing-entry h3 a { color: var(--accent); text-decoration-color: #335a46; font-weight: 400; }
 .text-link:hover, a.text-link:hover, .resource-links a:hover, .writing-entry h3 a:hover { color: var(--lilac); }
 .creature-field { min-width: 0; padding: 0; background: #080a0a; border: 1px solid #303735; box-shadow: none; }

@@ -42,7 +42,7 @@ export const search = {
     writing: {
       path: '/blog',
       title: 'Neuroscience & AI Writing | Jayashruthi Rajesh Babu',
-      description: 'Essays by Jayashruthi Rajesh Babu (Shruthi) on neuroscience, consciousness, neural networks, machine minds and mathematics, with links to Medium and a paper',
+      description: 'Essays by Jayashruthi Rajesh Babu (Shruthi) on AI agents, safety, neuroscience, consciousness and mathematics, including On Rogue Agents on Medium',
     },
     contact: {
       path: '/contact',
