@@ -30,60 +30,29 @@ function drawScene(ctx, creatures, apples, time) {
     rect('#e99166', x + 2, y + 2, 2, 2);
     rect('#9d4534', x + 2, y + 7, 6, 2);
   };
-  rect('#91cbd3', 0, 0, WIDTH, HEIGHT);
-  rect('#ffe5a0', 249, 16, 23, 23);
-  // Distant hedgerows, an open meadow and an irregular earth path.
-  for (let i = 0; i < 10; i++) {
-    rect(i % 2 ? '#5c9c7d' : '#76b28b', i * 43 - 15, 44 + (i % 3) * 5, 58, 30);
-  }
-  rect('#5c933b', 0, 72, WIDTH, HEIGHT - 72);
-  rect('#7ab34a', 9, 96, 342, 160);
-  rect('#91bd52', 45, 139, 251, 79);
-  rect('#91bd52', 76, 119, 192, 116);
-  rect('#c9aa70', 153, 89, 36, 18);
-  rect('#dfbb7a', 160, 103, 38, 21);
-  rect('#dfbb7a', 180, 117, 44, 14);
-  // Fence rails sit behind the creatures.
-  rect('#8e7650', 0, 83, 153, 4);
-  rect('#8e7650', 190, 83, 170, 4);
-  rect('#d2b785', 0, 78, 153, 5);
-  rect('#d2b785', 190, 78, 170, 5);
-  for (let x = 10; x < WIDTH; x += 25) {
-    if (x > 147 && x < 191) continue;
-    rect('#8e7650', x + 2, 75, 5, 24);
-    rect('#ead09b', x, 72, 5, 24);
-  }
-  // Deterministic details keep grass from flickering between frames.
-  for (let i = 0; i < 75; i++) {
-    const x = (i * 79 + 13) % WIDTH;
-    const y = 102 + (i * 43) % 149;
-    rect(i % 3 ? '#68a43d' : '#b6d26a', x, y, 3, 2);
-    if (i % 3 === 0) rect('#4c8535', x + 3, y - 2, 1, 4);
-  }
-  const tree = (x, y) => {
-    rect('#8b9c60', x - 13, y + 25, 40, 6);
-    rect('#876145', x + 3, y, 8, 29);
-    rect('#af8251', x + 3, y, 3, 27);
-    rect('#285d3b', x - 19, y - 21, 49, 26);
-    rect('#397943', x - 24, y - 39, 57, 29);
-    rect('#539343', x - 17, y - 52, 44, 37);
-    rect('#6cab4c', x - 10, y - 58, 29, 26);
-    rect('#92c45b', x - 8, y - 48, 9, 5);
-    apple(x - 13, y - 22); apple(x + 14, y - 30);
-  };
-  tree(39, 97); tree(310, 99);
-  for (const [x, y] of [[20, 188], [323, 168], [50, 244], [272, 238], [131, 115], [335, 229]]) {
-    rect('#688651', x + 2, y, 2, 7);
-    rect('#f4e0a4', x, y - 2, 6, 3);
-    rect('#df9b71', x + 2, y - 4, 2, 6);
-  }
+  // Monitor grid: the simulation remains interactive without scenery.
+  rect('#101625', 0, 0, WIDTH, HEIGHT);
+  for (let x = 0; x < WIDTH; x += 12) rect(x % 60 ? '#1b2538' : '#303a52', x, 0, 1, HEIGHT);
+  for (let y = 0; y < HEIGHT; y += 12) rect(y % 60 ? '#1b2538' : '#303a52', 0, y, WIDTH, 1);
+  rect('#3b5763', 16, 19, 328, 1);
+  rect('#3b5763', 16, 72, 328, 1);
+  // Decorative trace, independent of the simulation and project data.
+  const trace = [[22,49], [66,49], [76,43], [85,49], [112,49], [123,60], [137,29],
+    [148,56], [159,49], [197,49], [207,44], [217,49], [245,49], [254,60],
+    [266,30], [278,57], [290,49], [338,49]];
+  ctx.beginPath();
+  trace.forEach(([x,y], i) => i ? ctx.lineTo(x,y) : ctx.moveTo(x,y));
+  ctx.strokeStyle = '#8de2c3';
+  ctx.lineWidth = 1.25;
+  ctx.stroke();
+  for (let x = 22; x < 342; x += 12) rect('#536681', x, 78, 1, x % 5 ? 3 : 6);
   apples.forEach(item => apple(item.x - 5, item.y - 5));
   [...creatures].sort((a, b) => a.y - b.y).forEach(creature => {
     const frame = Math.floor(time * 6 + creature.phase) % 2;
     const bounce = creature.walking ? frame : 0;
     const x = Math.round(creature.x - 16);
     const y = Math.round(creature.y - 37 - bounce);
-    rect('#82945c', x + 4, creature.y - 1, 24, 4);
+    rect('#394762', x + 4, creature.y - 1, 24, 4);
     sprite.forEach((row, py) => [...row].forEach((pixel, px) => {
       if (!palette[pixel]) return;
       const step = py >= 17 && creature.walking ? (px < 8 ? frame : -frame) : 0;
@@ -214,7 +183,7 @@ export default function ThrongletField() {
 
   return <figure className="creature-field">
     <figcaption className="field-title"><span>Thronglets</span><span>Pixel simulation</span></figcaption>
-    <canvas ref={canvas} width={WIDTH} height={HEIGHT} role="img" aria-label="Six golden pixel creatures exploring a green field, with apple thought bubbles when they are hungry" aria-describedby="field-instructions" onPointerDown={feedAtPointer} />
+    <canvas ref={canvas} width={WIDTH} height={HEIGHT} role="img" aria-label="Six golden pixel creatures on a dark monitor grid, with apple thought bubbles when they are hungry" aria-describedby="field-instructions" onPointerDown={feedAtPointer} />
     <div className="field-controls"><button type="button" className="button button-small" onClick={() => simulation.current?.feed()}>Feed <span aria-hidden="true">+</span></button><button type="button" className="field-pause" onClick={toggleAnimation}>{paused ? 'Resume animation' : 'Pause animation'}</button></div>
     <p id="field-instructions" className="field-instructions">Click the field or use Feed to drop an apple</p>
     <span className="sr-only" role="status">{message}</span>

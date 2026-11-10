@@ -44,8 +44,7 @@ You can use paragraphs that sound like you. Keep the measured results, dataset a
 - `lib/seo.js`: connects the pages, Person identity, GitHub/LinkedIn profiles and projects using structured data.
 - `app/layout.jsx`: shared metadata, crawl settings and the Person/website information. Individual page files use `pageMetadata(...)`.
 - `components/ThrongletField.jsx`: the canvas sprites, walking and hunger behaviour, Feed button and animation controls.
-- `app/styles/globals.css`: colours, fonts, borders, spacing and button styling. The main palette and wood colours are at the very top; wooden menu styles are near the end.
-- `public/landscape.svg`: original pixel landscape behind the pages.
+- `app/styles/globals.css`: colours, fonts, borders, spacing and button styling. The dark palette and Comic Sans font stack are at the top. The button bevels use `--face`, `--bevel-top` and `--bevel-bottom`; desktop navigation and window frames are under the desktop chrome comment.
 - `components/FeaturedProject.jsx`: the GeneCraft and IntentLab feature layouts; their text comes from `content/site.js`.
 - `public/projects/`: your GeneCraft screenshot, an actual capture of the IntentLab demo, and the published model-comparison figure.
 - `public/social-card.svg` and `public/social-card.png`: the preview image used when the site is shared. If you edit the SVG, regenerate the PNG with `npm run social-image`.
@@ -112,3 +111,10 @@ Keep `googleVerification` in `content/search.js`: this public tag verifies owner
 After changing an individual page, update `search.updated` to the real edit date. The sitemap uses the same public-page list as the metadata. When changing the share graphic, run `npm run social-image` and change its image version in `lib/seo.js` so sharing services can fetch it again.
 
 In your verified Google Search Console property, inspect and request indexing for the homepage, About page, projects page and both project pages. The sitemap is `https://jayashruthi.com/sitemap.xml`. Metadata and structured data supply accurate context; Google chooses snippets, rankings and AI summaries. Re-crawling can take days or weeks, and a request does not guarantee inclusion. Official guidance: https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl and https://developers.google.com/search/docs/fundamentals/ai-optimization-guide.
+
+## Dark retro theme references
+
+- [Eric Meyer, Creating Buttons With CSS (1999)](https://meyerweb.com/eric/articles/webrev/199902.html): the side column of buttons informed the navigation. The raised and pressed states are drawn in CSS so labels can still wrap and resize.
+- [W3C website design archive](https://www.w3.org/help/w3c-website-design/): early two- and three-column designs informed the separation of navigation from the main page frame. The portfolio uses responsive CSS instead of fixed columns at mobile sizes.
+- [Olia Lialina, A Vernacular Web](https://art.teleportacia.org/observation/vernacular/) and [Cameron's World](https://www.cameronsworld.net/): the tiled background and personal typography draw on the handmade web. No archive graphics are used.
+- The font stack starts with the device's Comic Sans MS. [Comic Neue](https://fontsource.org/fonts/comic-neue/use) is bundled as an open-licensed fallback.

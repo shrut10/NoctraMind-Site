@@ -1,9 +1,5 @@
-import '@fontsource/pixelify-sans/latin-400.css';
-import '@fontsource/pixelify-sans/latin-600.css';
-import '@fontsource/dm-sans/latin-400.css';
-import '@fontsource/dm-sans/latin-500.css';
-import '@fontsource/dm-sans/latin-600.css';
-import '@fontsource/dm-sans/latin-700.css';
+import '@fontsource/comic-neue/latin-400.css';
+import '@fontsource/comic-neue/latin-700.css';
 import './styles/globals.css';
 import ClientLayout from './ClientLayout';
 import StructuredData from '@/components/StructuredData';
