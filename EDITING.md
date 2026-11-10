@@ -84,11 +84,11 @@ To reverse a published change, revert its commit and push, or restore an earlier
 
 The demo has its own repository and deployment. Its introduction, headings and explanations are in [web/index.html](https://github.com/shrut10/intentlab-bci/edit/main/web/index.html). Find the exact words visible on the page and change the text between the HTML tags. Keep `id` attributes and control values intact.
 
-- Main title: search `Imagining left.`
-- Intro: search `I trained a model`.
-- Notes: search `What I wanted to test`, `Where it falls short`, or `What still needs testing`.
+- Main title: search `Recorded EEG decoding`
+- Intro: search `IntentLab classifies EEG`.
+- Notes: search `Research question`, `Limits of the evidence`, or `Further evaluation`.
 - Messages after a prediction: `web/app.js`.
-- Palette and fonts: `web/base.css`; demo layout, borders and buttons: `web/pixel.css`.
+- Palette and fonts: `web/base.css`; demo layout, borders and buttons: `web/styles.css`.
 - Full map: [IntentLab editing guide](https://github.com/shrut10/intentlab-bci/blob/main/docs/EDITING.md).
 
 Local folder: `/Users/shruthi/Documents/ChatGPT/Career/intentlab-bci`. Pushing its `main` branch updates `intentlab-bci.vercel.app` independently of this portfolio.

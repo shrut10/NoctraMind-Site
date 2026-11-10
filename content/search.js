@@ -27,9 +27,9 @@ export const search = {
       path: '/projects/intentlab',
       title: 'IntentLab: EEG & BCI | Jayashruthi Rajesh Babu',
       description: 'IntentLab by Jayashruthi Rajesh Babu (Shruthi): recorded EEG motor imagery decoding, model evaluation and a public demo, listed in NeuroTechX’s Awesome BCI',
-      image: '/projects/intentlab.png',
+      image: '/projects/intentlab.png?v=neon-20261110',
       imageAlt: 'IntentLab recorded EEG decoding and confidence controls, a BCI project by Jayashruthi Rajesh Babu',
-      imageWidth: 1280, imageHeight: 960,
+      imageWidth: 1440, imageHeight: 900,
     },
     genecraft: {
       path: '/projects/genecraft',

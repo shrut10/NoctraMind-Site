@@ -95,8 +95,8 @@ export const intentlab = {
   question: 'Recognising imagined movement in unfamiliar recordings',
   motivation: 'IntentLab evaluates whether a model trained on one group of participants can recognise imagined movement in recordings from other people, with controls for inspecting correct and incorrect predictions',
   kind: 'EEG · Brain computer interfaces',
-  image: '/projects/intentlab.png',
-  imageAlt: 'Recorded EEG traces, recording controls and left and right probabilities in IntentLab’s pixel art demo',
+  image: '/projects/intentlab.png?v=neon-20261110',
+  imageAlt: 'Recorded EEG traces, recording controls and left and right probabilities in IntentLab’s interactive demonstration',
   detailHeadings: { community: 'Community resources', question: 'The question', demo: 'How to use it', result: 'Results on unseen people', implementation: 'How it works' },
   implementation: [
     'The training pipeline compares simple baselines with a compact convolutional network using public EEG recordings, with the selected model served through ONNX and FastAPI',
@@ -141,7 +141,7 @@ export const about = {
     'Research interests include neuroscience, neurotechnology and artificial intelligence, particularly learning, decision making and the limits of understanding in artificial systems',
     'IntentLab uses machine learning to classify imagined hand movements from recorded EEG and is included in NeuroTechX’s community curated Awesome BCI resources',
     'Other work includes GeneCraft, which explores agent memory and persistent work in Minecraft, and essays on consciousness, cognition and computational neuroscience',
-    'Professional interests are in AI and ML engineering, with an emphasis on practical systems and careful evaluation, and graduate opportunities in London from 2027',
+    'Professional interests are in AI and ML engineering, with an emphasis on practical systems and careful evaluation, and enquiries about opportunities and collaborations are welcome',
   ],
   currentHeading: 'Current interests',
   current: [
@@ -155,5 +155,5 @@ export const about = {
 export const contact = {
   title: 'Contact',
   intro: 'Enquiries about AI and ML opportunities, research, collaborations and project work',
-  note: 'Use the email address below for enquiries about research, projects or AI and ML opportunities',
+  note: 'Please use the email address below for enquiries about research, projects or AI and ML opportunities',
 };
