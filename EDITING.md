@@ -8,17 +8,17 @@ The website lives in `/Users/shruthi/Documents/ChatGPT/Career/portfolio-refresh`
 
 This is the main file for changing the wording. [Open the copy file on GitHub](https://github.com/shrut10/NoctraMind-Site/edit/main/content/site.js), or open it in any text editor. Change the words, then commit to `main` to update the live site through Vercel.
 
-The quickest places to start are `profile.introduction` (the homepage intro), `profile.welcome` (the short line below it), and `ui.projectsIntro` (the projects page tagline).
+The quickest places to start are `home.newsTitle` and `home.newsText` (the homepage update), `about.intro` and `about.paragraphs` (the professional biography), and `ui.projectsIntro` (the projects page tagline). The old `profile.introduction` and `profile.welcome` fields are no longer displayed on the homepage.
 
 | What you want to change | Find this in `content/site.js` |
 | --- | --- |
-| Your name, introduction, email and social links | `profile` |
+| Your identity metadata, email and social links | `profile` |
 | The homepage announcement and its button wording | `home.newsTitle`, `home.newsText`, `home.newsButton` |
 | Other homepage headings and sentences | `home` |
 | Menu labels, buttons, section headings and page taglines | `ui` |
 | GeneCraft’s page, screenshot caption and download link | `genecraft` |
 | IntentLab’s explanation, motivation and results | `intentlab` |
-| The NeuroTechX listing on the homepage and project page | `intentlab.recognition`, `intentlab.recognitionDetail` and their adjacent links |
+| The NeuroTechX listing on the homepage and project page | `home.newsResourceLabel`, `intentlab.recognition`, `intentlab.recognitionDetail` and their adjacent links |
 | Other project names, descriptions, thumbnails and GitHub links | `projects` |
 | Essay titles, summaries and links | `posts` |
 | About page | `about` |
@@ -44,7 +44,7 @@ You can use paragraphs that sound like you. Keep the measured results, dataset a
 - `lib/seo.js`: connects the pages, Person identity, GitHub/LinkedIn profiles and projects using structured data.
 - `app/layout.jsx`: shared metadata, crawl settings and the Person/website information. Individual page files use `pageMetadata(...)`.
 - `components/ThrongletField.jsx`: the canvas sprites, walking and hunger behaviour, Feed button and animation controls.
-- `app/styles/globals.css`: colours, fonts, borders, spacing and button styling. The dark palette and Comic Sans font stack are at the top. The button bevels use `--face`, `--bevel-top` and `--bevel-bottom`; desktop navigation and window frames are under the desktop chrome comment.
+- `app/styles/globals.css`: colours, fonts, borders, spacing and button styling. The black palette and Comic Sans font stack are at the top. The current layout and control styles are in the final minimal interface section.
 - `components/FeaturedProject.jsx`: the GeneCraft and IntentLab feature layouts; their text comes from `content/site.js`.
 - `public/projects/`: your GeneCraft screenshot, an actual capture of the IntentLab demo, and the published model-comparison figure.
 - `public/social-card.svg` and `public/social-card.png`: the preview image used when the site is shared. If you edit the SVG, regenerate the PNG with `npm run social-image`.
@@ -112,11 +112,11 @@ After changing an individual page, update `search.updated` to the real edit date
 
 In your verified Google Search Console property, inspect and request indexing for the homepage, About page, projects page and both project pages. The sitemap is `https://jayashruthi.com/sitemap.xml`. Metadata and structured data supply accurate context; Google chooses snippets, rankings and AI summaries. Re-crawling can take days or weeks, and a request does not guarantee inclusion. Official guidance: https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl and https://developers.google.com/search/docs/fundamentals/ai-optimization-guide.
 
-## Dark retro theme references
+## Earlier dark retro theme references
 
-- [Eric Meyer, Creating Buttons With CSS (1999)](https://meyerweb.com/eric/articles/webrev/199902.html): the side column of buttons informed the navigation. The raised and pressed states are drawn in CSS so labels can still wrap and resize.
+- [Eric Meyer, Creating Buttons With CSS (1999)](https://meyerweb.com/eric/articles/webrev/199902.html): informed the earlier raised buttons and side navigation, before the current simpler controls.
 - [W3C website design archive](https://www.w3.org/help/w3c-website-design/): early two- and three-column designs informed the separation of navigation from the main page frame. The portfolio uses responsive CSS instead of fixed columns at mobile sizes.
-- [Olia Lialina, A Vernacular Web](https://art.teleportacia.org/observation/vernacular/) and [Cameron's World](https://www.cameronsworld.net/): the tiled background and personal typography draw on the handmade web. No archive graphics are used.
+- [Olia Lialina, A Vernacular Web](https://art.teleportacia.org/observation/vernacular/) and [Cameron's World](https://www.cameronsworld.net/): informed the earlier tiled background, since replaced by pure black. No archive graphics are used.
 - The font stack starts with the device's Comic Sans MS. [Comic Neue](https://fontsource.org/fonts/comic-neue/use) is bundled as an open-licensed fallback.
 
 
