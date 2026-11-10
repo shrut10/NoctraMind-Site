@@ -118,3 +118,16 @@ In your verified Google Search Console property, inspect and request indexing fo
 - [W3C website design archive](https://www.w3.org/help/w3c-website-design/): early two- and three-column designs informed the separation of navigation from the main page frame. The portfolio uses responsive CSS instead of fixed columns at mobile sizes.
 - [Olia Lialina, A Vernacular Web](https://art.teleportacia.org/observation/vernacular/) and [Cameron's World](https://www.cameronsworld.net/): the tiled background and personal typography draw on the handmade web. No archive graphics are used.
 - The font stack starts with the device's Comic Sans MS. [Comic Neue](https://fontsource.org/fonts/comic-neue/use) is bundled as an open-licensed fallback.
+
+
+## Minimal black theme and writing
+
+The homepage starts with project updates and the Thronglets landscape, with the professional biography kept on About
+
+Use direct explanatory wording without sentence full stops, hyphens, exclamations or dramatic fragments in visible prose, while preserving decimal points, addresses, URLs and identifiers where needed for accuracy
+
+The page background is pure black, with green links and active controls, grey body text and restrained borders
+
+The Thronglets scene is drawn in canvas with layered mountains, fir trees and fog, with the existing feed and pause controls preserved
+
+[Incompetech](https://incompetech.com/) informed the focus on concrete project updates, with the visual direction taken from the supplied black interface reference
