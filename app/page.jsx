@@ -36,7 +36,7 @@ export default function Home() {
         </div>
         <article className="news-board research-update" aria-labelledby="recognition-title">
           <div className="news-copy"><p className="eyebrow">{home.newsLabel}</p><h2 id="recognition-title">{home.newsTitle}</h2><p>{home.newsText}</p></div>
-          <div className="news-actions"><Link className="text-link" href={home.newsHref}>{home.newsButton} ↗</Link><a className="text-link" href={intentlab.recognitionUrl} target="_blank" rel="noopener noreferrer">{home.newsResourceLabel} ↗</a></div>
+          <div className="news-actions"><Link className="text-link" href={home.newsHref}>{home.newsButton} ↗</Link><a className="text-link" href={intentlab.recognitionUrl} target="_blank" rel="noopener noreferrer">{home.newsResourceLabel}{'\u00a0↗'}</a></div>
         </article>
       </section>
       <ThrongletField />

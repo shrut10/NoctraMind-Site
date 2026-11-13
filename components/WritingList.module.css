@@ -11,7 +11,7 @@
   height: 100%;
   position: relative;
   background: var(--panel);
-  border: 1px solid var(--line);
+  border: 1px solid var(--panel-outline);
 }
 
 .card:hover, .card:focus-within { border-color: var(--lilac); }
@@ -20,6 +20,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1.16fr) minmax(0, 1fr);
   align-items: center;
+  border-color: var(--essay-outline);
 }
 
 .figure { min-width: 0; }
@@ -74,7 +75,8 @@
 .card:hover .read, .card:focus-within .read { text-decoration: underline; }
 
 .compact { grid-template-columns: 1fr; gap: 0; }
-.compact .card { border-width: 0 0 1px; background: transparent; }
+.compact .card { border-width: 0 0 1px; border-bottom-color: var(--line); background: transparent; }
+.compact .card:hover, .compact .card:focus-within { border-bottom-color: var(--lilac); }
 .compact .figure { width: clamp(145px, 20vw, 200px); }
 .compact .card:has(.figure) { flex-direction: row; align-items: center; }
 .compact .figure figcaption { padding-inline: 0; border: 0; }
