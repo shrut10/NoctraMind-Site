@@ -15,24 +15,16 @@ export const profile = {
 };
 
 export const home = {
-  greeting: 'Updates',
   newsLabel: 'Research update',
   newsTitle: 'Learning from unlabelled EEG',
   newsText: 'IntentLab now includes a comparison of masked channel pretraining and learning from scratch, with timing measurements and an audit of a separate intracortical dataset',
   newsButton: 'Explore IntentLab',
   newsHref: '/projects/intentlab#pretraining',
   newsResourceLabel: 'Included in NeuroTechX’s Awesome BCI resources',
-  writingUpdate: {
-    label: 'New essay',
-    title: 'On Rogue Agents',
-    text: 'An essay on AI agents, permission and the limits of autonomy',
-    href: 'https://medium.com/@rjayashruthi/on-rogue-agents-0623c9ae57c1',
-    button: 'Read on Medium',
-  },
   projectsHeading: 'Projects',
   projectsIntro: 'Brain computer interfaces, AI agents and machine learning projects',
   writingHeading: 'Writing',
-  writingIntro: 'Essays on neuroscience, artificial intelligence and mathematics',
+  writingIntro: 'AI agents, machine minds and the futures imagined in science fiction',
   contactHeading: 'Contact',
   contactText: 'Enquiries about projects, research and AI or ML opportunities',
 };
@@ -54,9 +46,9 @@ export const ui = {
   projectButton: 'About the project', demoButton: 'Try the demo', backProjects: '← Back to projects',
   projectsTitle: 'Projects', projectsIntro: 'Projects in brain computer interfaces, agentic AI and machine learning',
   moreProjects: 'More projects', githubButton: 'More on GitHub',
-  writingTitle: 'Writing', writingIntro: 'Essays on artificial intelligence, consciousness, neuroscience and mathematics',
-  essaysLabel: 'Essays', entriesLabel: 'entries', mediumButton: 'Medium',
-  writingNote: 'Essays are available on Medium and the Markov processes paper is available as a PDF',
+  writingTitle: 'Writing',
+  writingIntro: 'I write about what happens when software can act on its own, when a brain becomes an interface, and when science fiction gives me a way to think about either.',
+  mediumButton: 'Follow me on Medium',
   emailButton: 'Email', letterTo: 'Email',
   contactLinks: [{ title: 'GitHub', text: 'Project repositories', key: 'github' }, { title: 'University code', text: 'Coursework and group projects', key: 'universityGithub' }, { title: 'LinkedIn', text: 'Work and opportunities', key: 'linkedin' }],
   footerGithub: 'GitHub', footerUniversity: 'University code', footerLinkedin: 'LinkedIn', footerEmail: 'Email',
@@ -136,11 +128,69 @@ export const projects = [
 ];
 
 export const posts = [
-  { title: 'On Rogue Agents', excerpt: 'An essay on AI agents, permission and the limits of autonomy, examining what happens when systems act beyond their authorised access', topic: 'AI agents & safety', format: 'Essay', link: 'https://medium.com/@rjayashruthi/on-rogue-agents-0623c9ae57c1' },
-  { title: 'Bridging minds and machines through neural networks', excerpt: 'An essay on neural networks and the possibility of representing a human brain in a computer', topic: 'Brains & machines', format: 'Essay', link: 'https://medium.com/@rjayashruthi/bridging-minds-and-machines-through-neural-networks-9a5f06778cc2' },
-  { title: 'Structural dependencies in Markov processes', excerpt: 'An overview of communicating classes, irreducibility, periodicity and the links between discrete and continuous time', topic: 'Mathematics', format: 'PDF', link: '/pdfs/markov-essay.pdf' },
-  { title: 'What Channel 4’s “Humans” teaches us about machine minds', excerpt: 'An essay on the questions about sentient artificial intelligence raised by Channel 4’s Humans', topic: 'Machine minds', format: 'Essay', link: 'https://medium.com/@rjayashruthi/what-channel-4s-humans-teaches-us-about-machine-minds-cc752e3f576f' },
+  {
+    title: 'Clayface and its implications for AI assisted Human Enhancement',
+    excerpt: 'Clayface made me wonder what happens when a treatment can learn from the person it’s meant to help. Who gets to decide what it keeps, what it changes and when it stops?',
+    topic: 'Human enhancement',
+    published: '2026-11-13',
+    link: 'https://medium.com/@rjayashruthi/clayface-and-its-implications-for-ai-assisted-human-enhancement-1eab0ec16e9a',
+    image: {
+      src: '/writing/clayface.webp',
+      width: 1200,
+      height: 675,
+      alt: 'Dr Caitlyn Corr examines Matt Hagen in front of two glowing brain scans.',
+      credit: 'Parisa Taghizadeh / © 2026 Warner Bros. Entertainment',
+    },
+  },
+  {
+    title: 'Controlling virtual worlds with brain computer interfaces',
+    excerpt: 'A chapter in Michio Kaku’s The Future of the Mind sent me from games controlled by brain signals to lucid dreaming, and to the question of what it would feel like to inhabit a world that responds to imagined movement.',
+    topic: 'Neurotechnology & VR',
+    published: '2026-11-13',
+    link: 'https://medium.com/@rjayashruthi/controlling-virtual-worlds-with-brain-computer-interfaces-427a6fb3cff7',
+    image: {
+      src: '/writing/virtual-worlds.webp',
+      width: 1200,
+      height: 668,
+      alt: 'Moonlight falls across a dark sea and a low rocky shoreline.',
+      credit: 'Martin Johnson Heade, Point Judith, Rhode Island, 1867–68. Cleveland Museum of Art, CC0.',
+    },
+  },
+  {
+    title: 'On Rogue Agents',
+    excerpt: 'An AI agent is told to keep trying. What happens when it treats the limits of its access as part of the problem? I look at what the Hugging Face breach tells us about permission and autonomy.',
+    topic: 'AI agents & safety',
+    published: '2026-10-18',
+    link: 'https://medium.com/@rjayashruthi/on-rogue-agents-0623c9ae57c1',
+  },
+  {
+    title: 'What Channel 4’s “Humans” might teach us about machine minds',
+    excerpt: 'I keep returning to Athena Morrow’s work in Humans and what it asks of us. How would we recognise a machine mind, especially when we want so badly to believe someone is still there?',
+    topic: 'Machine minds',
+    published: '2025-04-04',
+    link: 'https://medium.com/@rjayashruthi/what-channel-4s-humans-teaches-us-about-machine-minds-cc752e3f576f',
+    image: {
+      src: '/writing/humans.webp',
+      width: 980,
+      height: 653,
+      alt: 'Dr Athena Morrow shows Milo Khoury a small green device in Humans.',
+      credit: 'Colin Hutton / Channel 4',
+    },
+  },
+  {
+    title: 'Bridging minds and machines through digital brain simulation',
+    excerpt: 'What would it take to simulate a particular brain in software, including the changes through which it learns?',
+    topic: 'Brain simulation',
+    published: '2023-10-24',
+    link: 'https://medium.com/@rjayashruthi/bridging-minds-and-machines-through-neural-networks-9a5f06778cc2',
+  },
 ];
+
+export const markovPaper = {
+  title: 'Structural dependencies in Markov processes',
+  excerpt: 'An overview of communicating classes, irreducibility, periodicity and the links between discrete and continuous time.',
+  link: '/pdfs/markov-essay.pdf',
+};
 
 export const about = {
   title: 'About',

@@ -21,7 +21,8 @@ The quickest places to start are `home.newsTitle` and `home.newsText` (the homep
 | IntentLab’s explanation, motivation and results | `intentlab` |
 | The NeuroTechX listing on the homepage and project page | `home.newsResourceLabel`, `intentlab.recognition`, `intentlab.recognitionDetail` and their adjacent links |
 | Other project names, descriptions, thumbnails and GitHub links | `projects` |
-| Essay titles, summaries and links | `posts` |
+| Essay titles, summaries, publication dates, links and banner credits | `posts`, newest first. The homepage shows the latest publication day and the first essay leads the Writing page. |
+| The mathematics paper on the Writing page | `markovPaper` |
 | About page | `about` |
 | Contact page | `contact` |
 
@@ -38,7 +39,9 @@ You can use paragraphs that sound like you. Keep the measured results, dataset a
 - `app/page.jsx`: homepage section labels and link labels.
 - `app/projects/intentlab/page.jsx`: extra project section headings, technical explanation and resource links.
 - `app/projects/page.jsx`: projects page introduction and featured-project layout.
-- `app/blog/page.jsx`: writing page introduction and note about the PDF.
+- `app/blog/page.jsx`: featured essay, essay archive and mathematics paper.
+- `components/WritingList.module.css`: featured essay, archive card and homepage writing styles.
+- `public/writing/`: article banners. Match each file to its image entry in `posts`.
 - `app/ClientLayout.jsx`: menu and footer wording.
 - `content/search.js`: browser-tab titles, search descriptions, link-preview wording and current research topics.
 - `content/site.js` → `profile.name` and `profile.shortName`: the visible name, displayed as Jayashruthi Rajesh Babu (Shruthi). `profile.alternateNames` supplies name variants for search metadata only; do not add a visible explanation of these variants.
