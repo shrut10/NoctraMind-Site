@@ -163,6 +163,17 @@ export const posts = [
     topic: 'AI agents & safety',
     published: '2026-10-18',
     link: 'https://medium.com/@rjayashruthi/on-rogue-agents-0623c9ae57c1',
+    featured: true,
+    image: {
+      src: '/writing/rogue-agents.webp',
+      width: 1440,
+      height: 801,
+      alt: 'Orange, blue and green network cables cross beneath a ceiling tray in a computer lab.',
+      credit: 'Computer + Networking lab cables by Kbh3rd',
+      creditUrl: 'https://commons.wikimedia.org/wiki/File:Comp_lab_cables_20171121_131906.jpg',
+      licence: { label: 'CC BY 4.0', url: 'https://creativecommons.org/licenses/by/4.0/' },
+      creditNote: 'Resized for web.',
+    },
   },
   {
     title: 'What Channel 4’s “Humans” might teach us about machine minds',

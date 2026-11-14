@@ -28,7 +28,11 @@ export function WritingCard({ post, featured = false }) {
             unoptimized
             loading={featured ? 'eager' : 'lazy'}
           />
-          <figcaption>{image.credit}</figcaption>
+          <figcaption>
+            {image.creditUrl ? <a href={image.creditUrl}>{image.credit}</a> : image.credit}
+            {image.licence && <> · <a href={image.licence.url}>{image.licence.label}</a></>}
+            {image.creditNote && <> · {image.creditNote}</>}
+          </figcaption>
         </figure>
       )}
       <div className={styles.copy}>

@@ -7,7 +7,8 @@ import { pageMetadata, pageData } from '@/lib/seo';
 export const metadata = pageMetadata('writing');
 
 export default function Writing() {
-  const [featured, ...archive] = posts;
+  const featured = posts.find(post => post.featured) ?? posts[0];
+  const archive = posts.filter(post => post !== featured);
 
   return (
     <>
