@@ -122,7 +122,7 @@ export const intentlab = {
 };
 
 export const projects = [
-  { id: 'tree-outages', kind: 'Consulting project · Exploratory data analysis', icon: 'sprout', title: 'Tree outages, woodland and wind', description: 'Public-data exploration for an SSEN climate-resilience consulting project during my internship at Baringa. Combines published electricity fault records with woodland, terrain and weather data to examine where and when tree-related faults occur, without confidential client asset data.', tags: ['Python', 'GeoPandas', 'xarray', 'Exploratory statistics'], image: '/projects/tree-outages.png', imageAlt: 'Notebook chart comparing daily wind gusts on tree-related fault dates with other published electricity fault records', link: 'https://github.com/shrut10/Tree-Outage-Exploration' },
+  { id: 'tree-outages', kind: 'Consulting project · Exploratory data analysis', icon: 'sprout', title: 'Tree outages, woodland and wind', description: 'Exploratory data analysis using open source data, combining electricity fault records with woodland, terrain and weather data for an SSEN climate resilience consulting project at Baringa; I independently investigated this risk pathway during the EDA phase and proposed directions for future modelling', tags: ['Python', 'GeoPandas', 'xarray', 'Exploratory statistics'], image: '/projects/tree-outages.png', imageAlt: 'Notebook chart comparing daily wind gusts on tree related fault dates with other published electricity fault records', link: 'https://github.com/shrut10/Tree-Outage-Exploration' },
   { id: 'comparison', kind: 'Machine learning · Individual coursework', icon: 'network', title: 'Neural network vs polynomial regression', description: 'A comparison on the same noisy data in which the polynomial model with five parameters had about 14% lower MSE on unseen data than the neural network, with an analysis, report and interactive plot', tags: ['PyTorch', 'NumPy', 'Plotly', 'pytest'], image: '/projects/model-comparison.png', imageAlt: 'Published comparison plot showing polynomial and neural network fits over the training and validation data', link: 'https://github.com/shrut10/Neural-Network-vs-Polynomial-Regression-for-Function-Approximation' },
   { id: 'housing', kind: 'Group coursework', icon: 'house', title: 'House prices & neighbourhoods', description: 'A group project adding neighbourhood graph features to a neural network for California house prices, reducing test MSE from 0.2569 to 0.1672, or 34.9% relative to the baseline', tags: ['Python', 'scikit learn', 'Graph features'], link: 'https://github.com/shrut10/House-Price-Prediction' },
   { id: 'pagerank', kind: 'Earlier project', icon: 'network', title: 'PageRank visualiser', description: 'A web crawler and SQLite link graph, with an iterative PageRank implementation and a D3 view of how pages connect', tags: ['Python', 'SQLite', 'PageRank', 'D3'], link: 'https://github.com/shrut10/pagerank' },
@@ -154,7 +154,7 @@ export const posts = [
       width: 1200,
       height: 668,
       alt: 'Moonlight falls across a dark sea and a low rocky shoreline.',
-      credit: 'Martin Johnson Heade, Point Judith, Rhode Island, 1867–68. Cleveland Museum of Art, CC0.',
+      credit: 'Martin Johnson Heade, Point Judith, Rhode Island, 1867 to 1868. Cleveland Museum of Art, CC0.',
     },
   },
   {
@@ -198,7 +198,8 @@ export const about = {
   intro: 'Jayashruthi Rajesh Babu (Shruthi) is a data science student at the University of Leeds, graduating in 2027, with project experience in brain computer interfaces, EEG decoding and agentic AI',
   paragraphs: [
     'Research interests include neuroscience, neurotechnology and artificial intelligence, particularly learning, decision making and the limits of understanding in artificial systems',
-    'During a 2026 internship in the Solutions AI Lab (SAIL) at management consultancy Baringa, I supported a climate-resilience project for SSEN, including local exploratory analysis of public electricity-fault, vegetation and weather data',
+    'During a 2026 internship in the Solutions AI Lab (SAIL) at management consultancy Baringa, I supported an SSEN climate resilience project during exploratory data analysis, independently investigated a risk pathway and proposed directions for future modelling',
+    'My wider contribution included analysis of client data in a confidential Jupyter notebook on AWS SageMaker and a confidential internal methodology document for the team to support future climate resilience projects using data science and machine learning',
     'IntentLab uses machine learning to classify imagined hand movements from recorded EEG and is included in NeuroTechX’s community curated Awesome BCI resources',
     'Other work includes GeneCraft, which explores agent memory and persistent work in Minecraft, and essays on consciousness, cognition and computational neuroscience',
     'Professional interests are in AI and ML engineering, with an emphasis on practical systems and careful evaluation, and enquiries about opportunities and collaborations are welcome',
