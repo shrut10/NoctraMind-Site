@@ -43,6 +43,7 @@
 
 .figure figcaption a { position: relative; z-index: 1; }
 .figure figcaption a:hover { color: var(--ink); }
+.caption { margin-bottom: 5px; }
 
 .featured .figure { align-self: stretch; display: flex; flex-direction: column; }
 .featured .figure img { flex: 1 1 auto; min-height: 0; }

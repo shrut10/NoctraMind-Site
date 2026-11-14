@@ -29,6 +29,7 @@ export function WritingCard({ post, featured = false }) {
             loading={featured ? 'eager' : 'lazy'}
           />
           <figcaption>
+            {featured && image.caption && <p className={styles.caption}>{image.caption}</p>}
             {image.creditUrl ? <a href={image.creditUrl}>{image.credit}</a> : image.credit}
             {image.licence && <> · <a href={image.licence.url}>{image.licence.label}</a></>}
             {image.creditNote && <> · {image.creditNote}</>}
