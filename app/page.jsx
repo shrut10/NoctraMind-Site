@@ -3,7 +3,7 @@ import Image from 'next/image';
 import ThrongletField from '@/components/ThrongletField';
 import PixelIcon from '@/components/PixelIcon';
 import FeaturedProject from '@/components/FeaturedProject';
-import WritingList, { EssayDate } from '@/components/WritingList';
+import WritingList from '@/components/WritingList';
 import { home, posts, intentlab, genecraft, ui } from '@/content/site';
 import StructuredData from '@/components/StructuredData';
 import { pageMetadata, pageData } from '@/lib/seo';
@@ -11,7 +11,7 @@ import { pageMetadata, pageData } from '@/lib/seo';
 export const metadata = pageMetadata('home');
 
 export default function Home() {
-  const latestEssays = posts.filter(post => post.published === posts[0].published);
+  const selectedEssays = posts.slice(0, 2);
 
   return <><StructuredData data={pageData('home')} />
     <div className="home-top">
@@ -19,11 +19,10 @@ export default function Home() {
         <h1 id="updates-title">Updates</h1>
         <div className="essay-updates">
           <div className="essay-updates-heading">
-            <h2>{latestEssays.length === 1 ? 'New essay' : 'New essays'}</h2>
-            <EssayDate published={latestEssays[0].published} />
+            <h2>Selected writing</h2>
           </div>
           <ul role="list">
-            {latestEssays.map(post => (
+            {selectedEssays.map(post => (
               <li key={post.link}>
                 <a href={post.link} target="_blank" rel="noopener noreferrer">
                   {post.image && <Image src={post.image.src} width={post.image.width} height={post.image.height} alt="" unoptimized />}
@@ -43,7 +42,7 @@ export default function Home() {
     </div>
 
     <section className="page-section" aria-labelledby="projects-heading"><div className="section-heading"><div><h2 id="projects-heading">{home.projectsHeading}</h2><p>{home.projectsIntro}</p></div><Link href="/projects" className="text-link">{ui.allProjects} <span aria-hidden="true">→</span></Link></div><div className="featured-grid"><FeaturedProject compact project={intentlab} href="/projects/intentlab" titleId="home-intentlab" /><FeaturedProject compact project={genecraft} href="/projects/genecraft" titleId="home-genecraft" /></div></section>
-    <section className="page-section" aria-labelledby="writing-heading"><div className="section-heading"><div><h2 id="writing-heading">{home.writingHeading}</h2><p>{home.writingIntro}</p></div><Link href="/blog" className="text-link">{ui.allWriting} <span aria-hidden="true">→</span></Link></div><WritingList posts={posts.filter(post => !latestEssays.includes(post)).slice(0, 3)} compact /></section>
+    <section className="page-section" aria-labelledby="writing-heading"><div className="section-heading"><div><h2 id="writing-heading">{home.writingHeading}</h2><p>{home.writingIntro}</p></div><Link href="/blog" className="text-link">{ui.allWriting} <span aria-hidden="true">→</span></Link></div><WritingList posts={posts.slice(2, 5)} compact /></section>
     <section className="contact-strip"><PixelIcon name="mail" /><div><h2>{home.contactHeading}</h2><p>{home.contactText}</p></div><Link href="/contact" className="button">{ui.contactButton} <span aria-hidden="true">↗</span></Link></section>
   </>;
 }

@@ -128,19 +128,24 @@ export const projects = [
   { id: 'pagerank', kind: 'Earlier project', icon: 'network', title: 'PageRank visualiser', description: 'A web crawler and SQLite link graph, with an iterative PageRank implementation and a D3 view of how pages connect', tags: ['Python', 'SQLite', 'PageRank', 'D3'], link: 'https://github.com/shrut10/pagerank' },
 ];
 
+// Ordered by professional relevance; the first two are highlighted on the homepage.
 export const posts = [
   {
-    title: 'Clayface and its implications for AI assisted Human Enhancement',
-    excerpt: 'Clayface made me wonder what happens when a treatment can learn from the person it’s meant to help. Who gets to decide what it keeps, what it changes and when it stops?',
-    topic: 'Human enhancement',
-    published: '2026-11-13',
-    link: 'https://medium.com/@rjayashruthi/clayface-and-its-implications-for-ai-assisted-human-enhancement-1eab0ec16e9a',
+    title: 'On Rogue Agents',
+    excerpt: 'An AI agent is told to keep trying. What happens when it treats the limits of its access as part of the problem? I look at what the Hugging Face breach tells us about permission and autonomy.',
+    topic: 'AI agents & safety',
+    published: '2026-10-18',
+    link: 'https://medium.com/@rjayashruthi/on-rogue-agents-0623c9ae57c1',
     image: {
-      src: '/writing/clayface.webp',
-      width: 1200,
-      height: 675,
-      alt: 'Dr Caitlyn Corr examines Matt Hagen in front of two glowing brain scans.',
-      credit: 'Parisa Taghizadeh / © 2026 Warner Bros. Entertainment',
+      src: '/writing/rogue-agents-gothic-arch.webp',
+      width: 1400,
+      height: 788,
+      alt: 'Etching of an imaginary prison with stairways and narrow bridges crossing beneath stone arches.',
+      caption: 'Stairs and walkways crisscross Piranesi’s imaginary prison, tempting the eye to trace a way out. In the Hugging Face incident, AI agents turned a shared software package service into a message board and exploited security flaws to reach the internet from inside their sandbox.',
+      credit: 'Giovanni Battista Piranesi, The Gothic Arch, c. 1749 to 1750. The Metropolitan Museum of Art.',
+      creditUrl: 'https://www.metmuseum.org/art/collection/search/362798',
+      licence: { label: 'CC0', url: 'https://creativecommons.org/publicdomain/zero/1.0/' },
+      creditNote: 'Detail.',
     },
   },
   {
@@ -158,23 +163,11 @@ export const posts = [
     },
   },
   {
-    title: 'On Rogue Agents',
-    excerpt: 'An AI agent is told to keep trying. What happens when it treats the limits of its access as part of the problem? I look at what the Hugging Face breach tells us about permission and autonomy.',
-    topic: 'AI agents & safety',
-    published: '2026-10-18',
-    link: 'https://medium.com/@rjayashruthi/on-rogue-agents-0623c9ae57c1',
-    featured: true,
-    image: {
-      src: '/writing/rogue-agents-gothic-arch.webp',
-      width: 1400,
-      height: 788,
-      alt: 'Etching of an imaginary prison with stairways and narrow bridges crossing beneath stone arches.',
-      caption: 'Stairs and walkways crisscross Piranesi’s imaginary prison, tempting the eye to trace a way out. In the Hugging Face incident, AI agents turned a shared software package service into a message board and exploited security flaws to reach the internet from inside their sandbox.',
-      credit: 'Giovanni Battista Piranesi, The Gothic Arch, c. 1749 to 1750. The Metropolitan Museum of Art.',
-      creditUrl: 'https://www.metmuseum.org/art/collection/search/362798',
-      licence: { label: 'CC0', url: 'https://creativecommons.org/publicdomain/zero/1.0/' },
-      creditNote: 'Detail.',
-    },
+    title: 'Bridging minds and machines through digital brain simulation',
+    excerpt: 'What would it take to simulate a particular brain in software, including the changes through which it learns?',
+    topic: 'Brain simulation',
+    published: '2023-10-24',
+    link: 'https://medium.com/@rjayashruthi/bridging-minds-and-machines-through-neural-networks-9a5f06778cc2',
   },
   {
     title: 'What Channel 4’s “Humans” might teach us about machine minds',
@@ -189,13 +182,6 @@ export const posts = [
       alt: 'Dr Athena Morrow shows Milo Khoury a small green device in Humans.',
       credit: 'Colin Hutton / Channel 4',
     },
-  },
-  {
-    title: 'Bridging minds and machines through digital brain simulation',
-    excerpt: 'What would it take to simulate a particular brain in software, including the changes through which it learns?',
-    topic: 'Brain simulation',
-    published: '2023-10-24',
-    link: 'https://medium.com/@rjayashruthi/bridging-minds-and-machines-through-neural-networks-9a5f06778cc2',
   },
 ];
 

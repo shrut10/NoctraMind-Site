@@ -4,7 +4,7 @@ export const search = {
   url: 'https://jayashruthi.com',
   // Public Google Search Console ownership tag. Keep it to retain verification.
   googleVerification: 'e2uYNDMLv7C4VR3yh99oXCBTTPMWzswm8SipEACvwoc',
-  updated: '2026-11-14',
+  updated: '2026-11-20',
   personDescription: 'Jayashruthi Rajesh Babu, also known as Shruthi or Jaya, is a University of Leeds data science student building brain computer interface, EEG decoding, agentic AI and machine learning projects, including IntentLab and GeneCraft',
   topics: ['Brain computer interfaces (BCI)', 'Neurotechnology', 'EEG decoding', 'Motor imagery', 'Neuroscience', 'Computational neuroscience', 'Agentic AI', 'AI agents', 'Machine learning', 'Consciousness and cognition'],
   pages: {
@@ -42,7 +42,7 @@ export const search = {
     writing: {
       path: '/blog',
       title: 'Neuroscience & AI Writing | Jayashruthi Rajesh Babu',
-      description: 'Essays by Jayashruthi Rajesh Babu (Shruthi) on AI agents, brain computer interfaces, lucid dreaming and human enhancement, plus a paper on Markov processes.',
+      description: 'Essays by Jayashruthi Rajesh Babu (Shruthi) on AI agent safety, brain computer interfaces, digital brain simulation and machine minds, plus a paper on Markov processes',
     },
     contact: {
       path: '/contact',

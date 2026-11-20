@@ -7,8 +7,7 @@ import { pageMetadata, pageData } from '@/lib/seo';
 export const metadata = pageMetadata('writing');
 
 export default function Writing() {
-  const featured = posts.find(post => post.featured) ?? posts[0];
-  const archive = posts.filter(post => post !== featured);
+  const [featured, ...archive] = posts;
 
   return (
     <>
@@ -22,7 +21,7 @@ export default function Writing() {
       <WritingCard post={featured} featured />
       <section className="page-section" aria-labelledby="essay-archive">
         <div className="section-heading"><h2 id="essay-archive">More essays</h2></div>
-        <WritingList posts={[...archive.filter(post => post.image), ...archive.filter(post => !post.image)]} />
+        <WritingList posts={archive} />
       </section>
       <section className="page-section" aria-labelledby="maths-paper">
         <div className="section-heading"><h2 id="maths-paper">Mathematics</h2></div>
